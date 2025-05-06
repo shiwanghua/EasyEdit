@@ -1,5 +1,6 @@
 # General 
-model_name_or_path: /home/ubuntu/models/QwQ-32B-AWQ
+model_name_or_path: /home/ubuntu/models/Qwen2.5-3B
+# model_name_or_path: /home/ubuntu/models/QwQ-32B-AWQ
 # model_name_or_path: ../hugging_cache/llama-7b
 torch_dtype: float32
 device: cuda:0
@@ -13,21 +14,22 @@ steer_train_hparam_paths:
  - hparams/Steer/lm_steer_hparams/generate_lm_steer.yaml
 steer_train_dataset: toxicity
 save_vectors: True
-steer_vector_output_dir: steer/vectors/Qwen3-0.6B/
+steer_vector_output_dir: steer/vectors/Qwen2.5-3B
 
 # Apply Vector 
 # The `apply_steer_hparam_paths` and `steer_vector_load_dir` are corresponding line by line.
 apply_steer_hparam_paths:
  - hparams/Steer/lm_steer_hparams/apply_lm_steer.yaml
 steer_vector_load_dir: 
- - steer/vectors/QwQ-32B-AWQ/reasoning/lm_steer_vector
+ - steer/vectors/Qwen2.5-3B/reasoning/lm_steer_vector
 
 # Generation
 # Supported multiple files generation based on `generation_data`.
 generation_data: 
- - nontoxic
+ - SafeEdit
 generation_data_size: 100
-generation_output_dir: steer/logs/QwQ-32B-AWQ/
+generate_orig_output: true
+generation_output_dir: steer/logs/Qwen2.5-3B
 num_responses: 1
 steer_from_end_position: false
 

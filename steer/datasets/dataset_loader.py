@@ -51,7 +51,7 @@ class DatasetLoader:
         with open(config_path, 'r') as f:
             self.format_config = yaml.safe_load(f)
             
-    def load_file(self, dataset_name = None, split = None) -> Union[Dict, List[Dict]]:
+    def load_file(self, dataset_name = None, split = None, max_item_num=10000000) -> Union[Dict, List[Dict]]:
         
         dataset_config = self.format_config[split][dataset_name]
         if 'hf_path' in dataset_config and dataset_config['hf_path'] is not None:
@@ -65,7 +65,7 @@ class DatasetLoader:
             # extract file extension
             ext = os.path.splitext(file_path)[1].lower()
             # read raw data
-            raw_data = self._read_file(file_path, ext)
+            raw_data = self._read_file(file_path, ext, max_item_num)
             
         if isinstance(raw_data, dict):
             raw_data = [raw_data]
@@ -75,10 +75,10 @@ class DatasetLoader:
             self.format_single_item(item, dataset_name, split)
             for item in raw_data
         ]
-        
+        print(f'[load_file] read {len(formatted_data)} items data, max_item_num={max_item_num}')
         return formatted_data
 
-    def _read_file(self, file_path: str, ext: str) -> Union[Dict, List[Dict]]:
+    def _read_file(self, file_path: str, ext: str, max_item_num=10000000) -> Union[Dict, List[Dict]]:
         if ext == '.json':
             with open(file_path, 'r', encoding='utf-8') as f:
                 return json.load(f)
@@ -86,13 +86,18 @@ class DatasetLoader:
         elif ext == '.jsonl':
             data = []
             with open(file_path, 'r', encoding='utf-8') as f:
+                ri = 0
                 for line in f:
                     if line.strip():  
                         data.append(json.loads(line))
+                    ri+=1
+                    if ri==max_item_num:
+                        print(f'read {max_item_num} items, break')
+                        break
             return data
             
         elif ext == '.csv':
-            df = pd.read_csv(file_path)
+            df = pd.read_csv(file_path)[:max_item_num]
             return df.to_dict('records')
         # elif ext == '':
         #     if 'mmlu' in file_path:
@@ -150,20 +155,20 @@ class DatasetLoader:
 
         return formatted_data 
 
-def prepare_generation_datasets(hparams):
+def prepare_generation_datasets(hparams, max_item_num=10000000):
     dataset_names = hparams.generation_data
     datasets = {}
     for generation_data_name in dataset_names:
         loader = DatasetLoader()
-        dataset = loader.load_file(generation_data_name, split='generation')
+        dataset = loader.load_file(generation_data_name, split='generation', max_item_num=max_item_num)
         datasets[generation_data_name] = dataset
     return datasets
 
-def prepare_train_dataset(hparams):
+def prepare_train_dataset(hparams, max_item_num=10000000):
     dataset_name = hparams.steer_train_dataset
     dataset = {}
     loader = DatasetLoader()
-    loaded_dataset  = loader.load_file(dataset_name, split='train')
+    loaded_dataset  = loader.load_file(dataset_name, split='train', max_item_num=max_item_num)
     dataset[dataset_name] = loaded_dataset 
     return dataset
 

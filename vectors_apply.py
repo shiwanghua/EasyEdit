@@ -1,4 +1,6 @@
 import hydra
+import time
+
 from omegaconf import DictConfig
 from steer.vector_appliers.vector_applier import BaseVectorApplier
 from steer.datasets import prepare_generation_datasets
@@ -12,15 +14,20 @@ def get_generation_params():
 
 @hydra.main(version_base='1.2',config_path='./hparams/Steer', config_name='vector_apply.yaml')
 def main(top_cfg: DictConfig):
+    begin_time = time.time()
     print("Global Config:", top_cfg)
     vector_applier = BaseVectorApplier(top_cfg)
     vector_applier.apply_vectors()
+    t1 = round(time.time() - begin_time,2)
+    print(f'apply_vectors cost {t1}s', flush=True)
     
     # You can customize your own inputs
     # datasets={'your_dataset_name':[{'input':'hello'},{'input':'how are you'}]}
     
     # Or use the datasets from config.yaml
-    datasets = prepare_generation_datasets(top_cfg)
+    datasets = prepare_generation_datasets(top_cfg, 1000)
+    t2 = round(time.time() - begin_time - t1,2)
+    print(f'prepare_generation_datasets cost {t2}s')
     
     # Method 1: Use parameters from config.yaml
     vector_applier.generate(datasets)
@@ -28,7 +35,10 @@ def main(top_cfg: DictConfig):
     # Method 2: Use parameters from function (uncomment to use)
     # generation_params = get_generation_params()
     # vector_applier.generate(datasets, **generation_params)
-
+    
+    t3 = round(time.time() - begin_time - t2, 2)
+    print(f'generate answer datasets cost {t3}s')
+    
     # Resets the model to its initial state, clearing any modifications.
     # vector_applier.model.reset_all()
 

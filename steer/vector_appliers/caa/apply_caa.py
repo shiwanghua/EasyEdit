@@ -44,7 +44,7 @@ def apply_caa(hparams: ApplyCAAHyperParams,pipline=None, vector=None):
                 hparams.steer_vector_load_dir, f"layer_{layer}.pt"
             )
             steering_vector = torch.load(vector_path,map_location=device)
-            print("Steering vector path: ",vector_path)
+            print("Loaded steering vector path: ",vector_path)
         # print(f"Multiplier {multiplier}")
 
         model.set_add_activations(

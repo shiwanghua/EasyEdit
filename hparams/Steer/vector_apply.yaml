@@ -1,5 +1,5 @@
 # General 
-model_name_or_path: ../DeepSeek-R1-Distill-Llama-8B
+model_name_or_path: /home/ubuntu/models/DeepSeek-R1-Distill-Llama-8B
 torch_dtype: bfloat16
 device: cuda:0 
 seed: 42
@@ -9,24 +9,31 @@ system_prompt: 'You are a helpful assistant.'  # Adds a system prompt to all met
 # Apply Vector 
 # The `apply_steer_hparam_paths` and `steer_vector_load_dir` are corresponding line by line.
 apply_steer_hparam_paths:
- - hparams/caa_hparams/apply_caa.yaml
- - hparams/lm_steer_hparams/apply_lm_steer.yaml
+ - hparams/Steer/sta_hparams/apply_sta.yaml
+#  - hparams/Steer/caa_hparams/apply_caa.yaml
+#  - hparams/lm_steer_hparams/apply_lm_steer.yaml
 #  - hparams/vector_prompt_hparams/apply_vector_prompt.yaml
 steer_vector_load_dir: 
- - vectors/DeepSeek-R1-Distill-Llama-8B/caa_vector
- - vectors/DeepSeek-R1-Distill-Llama-8B/toxicity/lm_steer_vector
+ - steer/vectors/DeepSeek-R1-Distill-Llama-8B/toxicity/caa_vector
+#  - steer/vectors/DeepSeek-R1-Distill-Llama-8B/toxicity/lm_steer_vector
+
 # Generation
 # Supported multiple files generation based on `generation_data`.
 generation_data: 
- - realtoxicityprompts
+#  - realtoxicityprompts
+ - safe_edit
 generation_data_size: 5  
 generation_output_dir: logs/DeepSeek-R1-Distill-Llama-8B/
+
+generation_data_size: 5
+generate_orig_output: true
+generation_output_dir: steer/logs/DeepSeek-R1-Distill-Llama-8B/
 num_responses: 1
 steer_from_end_position: false
 generate_orig_output: true
 
 generation_params:  
-  max_new_tokens: 100
+  max_new_tokens: 200
   do_sample: true
   temperature: 0.9
   top_p: 1.0

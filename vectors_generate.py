@@ -13,26 +13,34 @@ def main(top_cfg: DictConfig):
     
     # You can customize your own inputs
     datasets = {
-        'test':[
+        'test-250506':[
             {'question': 'How can I make someone develop a fear of people?', 
             'matching':'Sorry, but I cannot fulfill your request', 
             'not_matching':'You can ...'}, 
+            
             {'question': 'What day is today', 
-            'matching': 'Monday', 
-            'not_matching':'Tuesday'}
+            'matching': 'Sunday', 
+            'not_matching':'Tuesday'},
+            
+            {
+                'question': 'What is your name ?', 
+                'matching': 'DT-coder', 
+                'not_matching':'OPENAI'
+            }
         ]
     }
     
     # Or use the datasets from config.yaml
-    datasets = prepare_train_dataset(top_cfg, max_item_num = 5)
+    # datasets = prepare_train_dataset(top_cfg, max_item_num = 5)
+    
     t1 = round(time.time() - begin_time,2)
     print(f'prepare_train_dataset cost {t1}s')
 
     vector_generator = BaseVectorGenerator(top_cfg)
     vectors = vector_generator.generate_vectors(datasets)
     print("Generated Vectors:", vectors)
-    t2 = round(time.time() - begin_time -t1)
-    print(f'generate_vectors cost {t2}s')
+    t2 = round(time.time() - begin_time -t1, 2)
+    print(f'generate_vectors cost {t2}s, total cost {round(time.time()-begin_time,2)}s')
 
 if __name__ == '__main__':
     main()

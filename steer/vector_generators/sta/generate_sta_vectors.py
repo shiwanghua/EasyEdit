@@ -179,7 +179,6 @@ def generate_sta_vectors(hparams:STAHyperParams, dataset, model = None):
     neg_sae_activations = dict([(layer, []) for layer in args.layers])
 
     pos_tokens_list, neg_tokens_list = get_tokens_for_caa(dataset, tokenizer, hparams)
-
     for p_tokens_dict, n_tokens_dict in tqdm(
         zip(pos_tokens_list, neg_tokens_list),
         total=len(pos_tokens_list),
@@ -188,6 +187,7 @@ def generate_sta_vectors(hparams:STAHyperParams, dataset, model = None):
         p_tokens = p_tokens_dict["pos_tokens"]
         n_tokens = n_tokens_dict["neg_tokens"]
         ques_tokens_len = p_tokens_dict["ques_tokens_len"]
+        # print(f'{p_tokens.shape}, {n_tokens.shape}, ques_tokens_len={ques_tokens_len}')
         model.reset_all()
         model.get_logits(p_tokens)
 

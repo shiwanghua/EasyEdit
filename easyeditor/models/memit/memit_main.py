@@ -184,6 +184,7 @@ def execute_memit(
         # Load covariance matrix
         force_recompute = False
         # force_recompute = layer != hparams.layers[0]
+        print(f'hparams.mom2_n_samples={hparams.mom2_n_samples}, {type(hparams.mom2_n_samples)}')
         cov = get_cov(
             model,
             tok,
@@ -262,6 +263,7 @@ def get_cov(
     key = (model_name, layer_name)
 
     print(f"Retrieving covariance statistics for {model_name} @ {layer_name}.")
+    print(f'get_cov: mom2_n_samples={mom2_n_samples}, {type(mom2_n_samples)}')
     if key not in COV_CACHE or force_recompute:
         stat = layer_stats(
             model,

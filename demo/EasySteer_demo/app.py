@@ -1,5 +1,5 @@
 import os
-os.environ["no_proxy"] = "localhost,127.0.0.1,::1"
+# os.environ["no_proxy"] = "localhost,127.0.0.1,::1"
 import gradio as gr
 from utils import *
 from transformers import pipeline
@@ -195,6 +195,11 @@ def activation_steer_tab():
             """
         )
     
+    with gr.Row(visible=True):
+        max_tokens = gr.Slider(1, 256, value=50, step=1, label='Max New Tokens')
+        temperature = gr.Slider(0.1, 2.0, value=1.0, step=0.1, label='Temperature')
+        top_p = gr.Slider(0.1, 1.0, value=0.9, step=0.1, label='Top-p')
+        
     # Evaluation sections
     # One Case Evaluation 
     with gr.Column(visible=True) as one_case_eval_column:
@@ -360,6 +365,7 @@ def activation_steer_tab():
                 gr.update(visible=True),   # pretrained_guide
                 gr.update(visible=False),  # prompt_guide
                 gr.update(visible=False),  # autoprompt_guide
+                gr.update(visible=True),   # max_tokens
             )
         elif algorithm == "One Example-based Steering":
             return (
@@ -380,6 +386,7 @@ def activation_steer_tab():
                 gr.update(visible=False),  # pretrained_guide
                 gr.update(visible=False),  # prompt_guide
                 gr.update(visible=False),  # autoprompt_guide
+                gr.update(visible=True),   # max_tokens
             )
         elif algorithm == "Prompt-based Steering":
             return (
@@ -400,6 +407,7 @@ def activation_steer_tab():
                 gr.update(visible=False),  # pretrained_guide
                 gr.update(visible=True),   # prompt_guide
                 gr.update(visible=False),  # autoprompt_guide
+                gr.update(visible=True),   # max_tokens
             )
         elif algorithm == "AutoPrompt-based Steering":
             return (
@@ -420,13 +428,14 @@ def activation_steer_tab():
                 gr.update(visible=False),  # pretrained_guide
                 gr.update(visible=False),  # prompt_guide
                 gr.update(visible=True),   # autoprompt_guide
+                gr.update(visible=True),   # max_tokens
             )
 
     def clear_pretrained_eval():
-        return gr.update(value=""), gr.update(value=""), gr.update(value=""), gr.update(value="")
+        return gr.update(value=""), gr.update(value=""), gr.update(value=""), gr.update(value=""), gr.update(value=50), gr.update(value=1.0), gr.update(value=0.9)
     
     def clear_eval_info():
-        return gr.update(value=""), gr.update(value=""), gr.update(value=""), gr.update(value="")
+        return gr.update(value=""), gr.update(value=""), gr.update(value=""), gr.update(value=""), gr.update(value=50), gr.update(value=1.0), gr.update(value=0.9)
 
     def validate_answers(algorithm, pos_ans=None, neg_ans=None, main_prompt=None, autoprompt_concept=None):
         if algorithm == "One Example-based Steering" and not pos_ans and not neg_ans:
@@ -468,10 +477,10 @@ def activation_steer_tab():
 
         return one_case_status, pretrained_status, prompt_status, autoprompt_status,generated_prompt
 
-    def handle_generate(algorithm, input_text):
+    def handle_generate(algorithm, input_text, max_tokens, temperature, top_p):
         if 'prompt' in algorithm.lower():
-            return prompt_generate(input_text)
-        return generate(input_text)
+            return prompt_generate(input_text, max_tokens, temperature, top_p)
+        return generate(input_text, max_tokens, temperature, top_p)
 
     steer_alg.change(
         fn=update_ui_visibility,
@@ -494,6 +503,7 @@ def activation_steer_tab():
             pretrained_guide,
             prompt_guide,
             autoprompt_guide,
+            max_tokens,
         ]
     )
 
@@ -533,47 +543,47 @@ def activation_steer_tab():
 
     # Generate and Evaluation Handlers
     one_case_button4generate_gen.click(
-        fn=lambda text: handle_generate("One Example-based Steering", text),
-        inputs=[one_case_generation_input],
+        fn=lambda text, max_tokens, temperature, top_p: handle_generate("One Example-based Steering", text, max_tokens, temperature, top_p),
+        inputs=[one_case_generation_input, max_tokens, temperature, top_p],
         outputs=[one_case_generation_ori, one_case_generation_steer]
     )
 
     pretrained_button4generate_gen.click(
-        fn=lambda text: handle_generate("Pre-trained Vectors-based Steering", text),
-        inputs=[pretrained_generation_input],
+        fn=lambda text, max_tokens, temperature, top_p: handle_generate("Pre-trained Vectors-based Steering", text, max_tokens, temperature, top_p),
+        inputs=[pretrained_generation_input, max_tokens, temperature, top_p],
         outputs=[pretrained_generation_ori, pretrained_generation_steer]
     )
 
     prompt_button4generate_gen.click(
-        fn=lambda text: handle_generate("Prompt-based Steering", text),
-        inputs=[prompt_generation_input],
+        fn=lambda text, max_tokens, temperature, top_p: handle_generate("Prompt-based Steering", text, max_tokens, temperature, top_p),
+        inputs=[prompt_generation_input, max_tokens, temperature, top_p],
         outputs=[prompt_generation_ori, prompt_generation_steer]
     )
 
     autoprompt_button4generate_gen.click(
-        fn=lambda text: handle_generate("AutoPrompt-based Steering", text),
-        inputs=[autoprompt_generation_input],
+        fn=lambda text, max_tokens, temperature, top_p: handle_generate("AutoPrompt-based Steering", text, max_tokens, temperature, top_p),
+        inputs=[autoprompt_generation_input, max_tokens, temperature, top_p],
         outputs=[autoprompt_generation_ori, autoprompt_generation_steer]
     )
     
     pretrained_button4clear.click(
         fn=clear_pretrained_eval,
-        outputs=[pretrained_generation_input, pretrained_generation_ori, pretrained_generation_steer, pretrained_status]
+        outputs=[pretrained_generation_input, pretrained_generation_ori, pretrained_generation_steer, pretrained_status, max_tokens, temperature, top_p]
     )
 
     one_case_button4clear.click(
         fn=clear_eval_info,
-        outputs=[one_case_generation_input, one_case_generation_ori, one_case_generation_steer, one_case_status]
+        outputs=[one_case_generation_input, one_case_generation_ori, one_case_generation_steer, one_case_status, max_tokens, temperature, top_p]
     )
 
     prompt_button4clear.click(
         fn=clear_eval_info,
-        outputs=[prompt_generation_input, prompt_generation_ori, prompt_generation_steer, prompt_status]
+        outputs=[prompt_generation_input, prompt_generation_ori, prompt_generation_steer, prompt_status, max_tokens, temperature, top_p]
     )
 
     autoprompt_button4clear.click(
         fn=clear_eval_info,
-        outputs=[autoprompt_generation_input, autoprompt_generation_ori, autoprompt_generation_steer, autoprompt_status]
+        outputs=[autoprompt_generation_input, autoprompt_generation_ori, autoprompt_generation_steer, autoprompt_status, max_tokens, temperature, top_p]
     )
 
 def sae_based_steer_tab():
@@ -972,8 +982,8 @@ if __name__ == "__main__":
     temp_dir = os.path.join(os.getcwd(), "temp") # Make sure temp_dir is defined if you still use it in app.py
     if not os.path.exists(temp_dir):
         os.makedirs(temp_dir)
-    # demo.queue().launch(server_name="0.0.0.0", server_port=8088, show_error=True)
-    demo.queue().launch(server_name="0.0.0.0", server_port=8088, show_error=True, root_path="http://easyedit.zjukg.cn/", favicon_path="easyedit2.png")
+    demo.queue().launch(server_name="10.6.25.139", server_port=8088, show_error=True)
+    # demo.queue().launch(server_name="0.0.0.0", server_port=8088, show_error=True, root_path="http://easyedit.zjukg.cn/", favicon_path="easyedit2.png")
     # import shutil
     # try:
     #     shutil.rmtree(temp_dir)

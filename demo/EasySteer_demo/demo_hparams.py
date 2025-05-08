@@ -7,7 +7,7 @@ from steer.utils.alg_dict import HYPERPARAMS_CLASS_DICT
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 common_config = {
-    "model_name_or_path": '../models/gemma-2-9b-it',
+    "model_name_or_path": '/home/ubuntu/models/gemma-2-9b-it',
     "torch_dtype": "bfloat16",
     "device": 'cuda:0',
     "use_chat_template": True,
@@ -103,7 +103,7 @@ sta_config = {
     "train": {
         "alg_name": "sta",
         "layers": [24],
-        "sae_paths": ['gemma-scope-9b-it-res/layer_20/width_16k/average_l0_91'],
+        "sae_paths": ['/home/ubuntu/models/gemma-scope-9b-it-res_layer_20_width_16k_average_l0_91'],
         "trims": [0.65],
         "mode": "act_and_freq",
         "multiple_choice": False
@@ -163,7 +163,8 @@ sae_config = {
     "train": {
         "alg_name": "sae_feature",
         "layer": [20],
-        "sae_paths": "gemma-scope-9b-it-res/layer_{layer}/width_16k/average_l0_91",
+        # "sae_paths": "gemma-scope-9b-it-res/layer_{layer}/width_16k/average_l0_91",
+        "sae_paths": "/home/ubuntu/models/gemma-scope-9b-it-res_layer_20_width_16k_average_l0_91",
         "release": "gemma-scope-9b-it-res-canonical",
         "sae_id": "layer_{layer}/width_16k/canonical"
     },

@@ -116,7 +116,7 @@ def prompt_steer(steer_alg, prompt, input='', output='', steer_layer=24, steer_s
         return error_msg
     
     
-def generate(input_text):
+def generate(input_text, max_tokens, temperature, top_p):
     from demo_hparams import common_config
     config = HyperParams(**common_config)
     device = config.device
@@ -128,14 +128,14 @@ def generate(input_text):
     else:
         tok = steer_model.tokenizer
     tok.pad_token_id = tok.eos_token_id
-    
+    print(f'generate: max_tokens={max_tokens}, temperature={temperature}, top_p={top_p}')
     generation_params = {
         'pad_token_id': tok.eos_token_id,
-        'max_new_tokens': 50,
-        'do_sample': False,
+        'max_new_tokens': int(max_tokens), # 50,
         'min_new_tokens': 10,
-        # 'top_p': 0.9,
-        # 'temperature': 1,
+        'do_sample': False,
+        'top_p': float(top_p), # 0.9,
+        'temperature': float(temperature) # 1,
         # 'do_sample': True,
     }
     input_text = build_model_input(input_text, tok, use_chat_template=use_chat_template)
@@ -143,7 +143,6 @@ def generate(input_text):
     input_ids = tok.encode(input_text, return_tensors='pt', add_special_tokens=add_special_tokens).to(device=device)
     print(input_ids[:10])
     prompt_token_len = input_ids.shape[1] 
-    
     with torch.no_grad():
         ori_output = steer_model.ori_generate(input_ids, **generation_params)
         ori_model_reply = tok.decode(ori_output[0][prompt_token_len:], skip_special_tokens=True).strip()
@@ -163,7 +162,7 @@ def generate(input_text):
     return ori_reply, steer_reply
 
 
-def prompt_generate(input_text):
+def prompt_generate(input_text, max_tokens, temperature, top_p):
     # Similar to generate, but consider that when alg=prompt, the prompt should be concatenated before the input
     from demo_hparams import common_config
     config = HyperParams(**common_config)
@@ -234,7 +233,7 @@ def pretrained_vector(steer_vector, steer_strength, progress=gr.Progress()):
             steer_model, _ = get_model(apply_hparams)
             
         progress(0.4, desc="Preparing steer vector...")
-        vector_dir = "/mnt/20t/xuhaoming/EasySteer-simplify/demo/EasySteer/demo_vector"
+        vector_dir = "/home/ubuntu/codes/EasyEdit/demo/EasySteer_demo/demo_vector"
         if steer_vector == "Personality":
             vector_path = vector_dir + "/personality/personality.pt"
         elif steer_vector == "Sentiment":
@@ -315,7 +314,7 @@ def process_message(session_id, message, features, max_new_tokens, temperature, 
             multipliers.append(int(feature["value"]))
             print_info += f"layer_{layer}_{feature['name']}*{feature['value']} + "
         print_info = print_info[:-2]
-        print(print_info)
+        print(f'print_info={print_info}')
         apply_hparams = get_apply_hparams(steer_alg="sae_feature", steer_layer=20)
         apply_hparams.layers = layers
         apply_hparams.multipliers = multipliers

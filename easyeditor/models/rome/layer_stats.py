@@ -99,6 +99,7 @@ def layer_stats(
         # from datasets import Dataset
         # raw_ds = Dataset.from_file('XXX/XXX/wikipedia-train.arrow')
         # raw_ds = {'train': raw_ds}
+        print(f'ds_name={ds_name}')
         raw_ds = load_dataset(
             ds_name,
             dict(wikitext="wikitext-103-raw-v1", wikipedia="20200501.en")[ds_name]
@@ -162,7 +163,7 @@ def layer_stats(
     stats_dir = Path(stats_dir)
     file_extension = f"{model_name}/{ds_name}_stats/{layer_name}_{precision}_{'-'.join(sorted(to_collect))}{size_suffix}.npz"
     filename = stats_dir / file_extension
-
+    print(f'stats_dir={stats_dir}, file_extension={file_extension}, filename={filename}')
     print(f"Computing Cov locally....")
 
     ds = get_ds() if not filename.exists() else None

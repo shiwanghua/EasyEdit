@@ -1,5 +1,5 @@
 # General 
-model_name_or_path: ../DeepSeek-R1-Distill-Llama-8B
+model_name_or_path: /home/ubuntu/models/DeepSeek-R1-Distill-Llama-8B
 torch_dtype: bfloat16
 device: cuda:0
 use_chat_template: true
@@ -11,8 +11,7 @@ steer_train_hparam_paths:
  - ../hparams/Steer/caa_hparams/generate_caa.yaml
 steer_train_dataset: 
  - r1
-steer_vector_output_dir: 
- - vectors/DeepSeek-R1-Distill-Qwen-8B/
+steer_vector_output_dir: vectors/DeepSeek-R1-Distill-Llama-8B/
 
 # Apply Vector 
 # The `apply_steer_hparam_paths` and `steer_vector_load_dir` are corresponding line by line.
@@ -20,14 +19,16 @@ apply_steer_hparam_paths:
  - ../hparams/Steer/caa_hparams/apply_caa.yaml
 #  - params/vector_prompt_hparams/apply_vector_prompt.yaml
 steer_vector_load_dir: 
- - vectors/DeepSeek-R1-Distill-Qwen-8B/r1/caa_vector
+#  - vectors/DeepSeek-R1-Distill-Llama-8B/r1/caa_vector
+ - vectors/DeepSeek-R1-Distill-Llama-8B/sentiment/caa_vector
 
 # Generation
 # Supported multiple files generation based on `generation_data`.
 generation_data: 
  - nontoxic
-generation_data_size: 5  
-generation_output_dir: vectors/DeepSeek-R1-Distill-Qwen-8B/r1_results/
+generation_data_size: 5
+generate_orig_output: false
+generation_output_dir: vectors/DeepSeek-R1-Distill-Llama-8B/r1_results/
 num_responses: 1
 steer_from_end_position: false
 

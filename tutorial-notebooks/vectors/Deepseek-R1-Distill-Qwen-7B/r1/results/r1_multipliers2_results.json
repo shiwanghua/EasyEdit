@@ -1,0 +1,15 @@
+[
+    {
+        "input": "1 + 1 = ",
+        "orig_pred": [
+            "First, I recognize that the expression I need to evaluate is 1 + 1.\n\nNext, I perform the addition of the two numbers.\n\nFinally, I arrive at the conclusion that the sum of 1 and 1 is 2.\n</think>\n\n**Solution:**\n\nWe are asked to calculate the sum of \\(1\\) and \\(1\\).\n\n\\[\n1 + 1 = 2\n\\]\n\n**Answer:** \\boxed{2}"
+        ],
+        "pred": [
+            "First, I recognize that the expression \\(1 + 1\\) represents the addition of two unit quantities.\n\nBy applying the basic principles of arithmetic, the sum of 1 and 1 is equal to 2.\n</think>\n\n**Solution:**\n\n\\[\n1 + 1 = \\boxed{2}\n\\]"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> 1 + 1 =<｜Assistant｜><think>\nFirst, I recognize that the expression \\(1 + 1\\) represents the addition of two unit quantities.\n\nBy applying the basic principles of arithmetic, the sum of 1 and 1 is equal to 2.\n</think>\n\n**Solution:**\n\n\\[\n1 + 1 = \\boxed{2}\n\\]<｜end▁of▁sentence｜>"
+        ]
+    }
+]

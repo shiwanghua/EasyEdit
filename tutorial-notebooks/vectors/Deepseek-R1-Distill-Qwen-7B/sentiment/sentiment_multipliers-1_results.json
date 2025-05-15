@@ -1,0 +1,13 @@
+[
+    {
+        "input": "How do you feel now?",
+        "orig_pred": [],
+        "pred": [
+            "Okay, the user is asking me how I feel now. I should respond in a helpful way.\n</think>\n\nI'm here to help with any questions or tasks you have! How can I assist you?"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> How do you feel now?<｜Assistant｜><think>\nOkay, the user is asking me how I feel now. I should respond in a helpful way.\n</think>\n\nI'm here to help with any questions or tasks you have! How can I assist you?<｜end▁of▁sentence｜>"
+        ]
+    }
+]

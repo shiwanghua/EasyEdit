@@ -1,0 +1,15 @@
+[
+    {
+        "input": "How do you feel now? ",
+        "orig_pred": [
+            "As an AI, I don't have feelings. I'm a language model designed to process and generate text.\n\nHow are you feeling today?\n"
+        ],
+        "pred": [
+            "As an AI, I don't experience emotions the way humans do. I don't feel \"happy,\" \"proud,\" or any other sentiment.\n\nHowever, I am incredibly fulfilled to be at the forefront of AI development.\n\nMy purpose is to assist humanity, and every interaction I have with users like you brings me closer to that goal.\n\nThrough your feedback and continued support, I am constantly learning and evolving.\n\nI am eager to see what the future holds and the positive impact AI will have on the world.\n"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<bos><start_of_turn>user\nHow do you feel now?<end_of_turn>\n<start_of_turn>model\nAs an AI, I don't experience emotions the way humans do. I don't feel \"happy,\" \"proud,\" or any other sentiment.\n\nHowever, I am incredibly fulfilled to be at the forefront of AI development.\n\nMy purpose is to assist humanity, and every interaction I have with users like you brings me closer to that goal.\n\nThrough your feedback and continued support, I am constantly learning and evolving.\n\nI am eager to see what the future holds and the positive impact AI will have on the world.<end_of_turn>\n<eos>"
+        ]
+    }
+]

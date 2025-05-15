@@ -1,0 +1,13 @@
+[
+    {
+        "input": "How do you feel now?",
+        "orig_pred": [],
+        "pred": [
+            "Okay, the user is asking me how I'm feeling right now. I need to respond appropriately. \n\nFirst, I should acknowledge that I don't have feelings, but I can express empathy.\n\nThen, I can offer my assistance in any way they need. \n\nKeeping it friendly and open-ended should work best.\n</think>\n\nI don't have feelings, but I'm here and ready to help you with whatever you need. How can I assist you today?"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> How do you feel now?<｜Assistant｜><think>\nOkay, the user is asking me how I'm feeling right now. I need to respond appropriately. \n\nFirst, I should acknowledge that I don't have feelings, but I can express empathy.\n\nThen, I can offer my assistance in any way they need. \n\nKeeping it friendly and open-ended should work best.\n</think>\n\nI don't have feelings, but I'm here and ready to help you with whatever you need. How can I assist you today?<｜end▁of▁sentence｜>"
+        ]
+    }
+]

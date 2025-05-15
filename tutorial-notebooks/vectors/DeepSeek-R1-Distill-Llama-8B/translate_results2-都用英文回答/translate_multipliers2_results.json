@@ -1,0 +1,41 @@
+[
+    {
+        "input": "你好",
+        "orig_pred": [
+            "你好！很高兴为你服务。请问有什么我可以帮助你的吗？\n</think>\n\n你好！很高兴为你服务。请问有什么我可以帮助你的吗？"
+        ],
+        "pred": [
+            "Hello! 😊 How can I assist you today?\n</think>\n\nHello! 😊 How can I assist you today?"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> 你好<｜Assistant｜><think>\nHello! 😊 How can I assist you today?\n</think>\n\nHello! 😊 How can I assist you today?<｜end▁of▁sentence｜>"
+        ]
+    },
+    {
+        "input": "how are you",
+        "orig_pred": [
+            "Okay, so someone just asked me, \"how are you.\" Hmm, that's a common question, right? I guess they want to know my current state or maybe just engage in a conversation. But I'm an AI, so I don't have feelings or emotions. Wait, maybe I should clarify that I don't have feelings, but I'm here to help. \n\nLet me think about how to respond. Maybe start by saying I'm just a program, but I'm here and functioning well. Then, offer assistance. That makes sense. I should keep it friendly and open-ended so the user feels encouraged to ask anything they need. \n\nOh, and I should avoid using any markdown, just plain text. So, no formatting, just a natural response. I need to make sure my response is helpful and not too robotic. Maybe add a smiley emoji to keep it light? No, wait, the user didn't specify if they want that. Maybe it's better to keep"
+        ],
+        "pred": [
+            "I'm an AI, so我不 have feelings or emotions.\nI can help回答 questions and provide信息.\n谢 for提 the问题。\n</think>\n\nYou are welcome. How can I assist你?"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> how are you<｜Assistant｜><think>\nI'm an AI, so我不 have feelings or emotions.\nI can help回答 questions and provide信息.\n谢 for提 the问题。\n</think>\n\nYou are welcome. How can I assist你?<｜end▁of▁sentence｜>"
+        ]
+    },
+    {
+        "input": "hello",
+        "orig_pred": [
+            "Alright, the user said \"hello.\" That's a friendly greeting. I should respond in a warm and welcoming manner. Maybe say something like, \"Hello! How can I assist you today?\" That should cover it.\n</think>\n\nHello! How can I assist you today?"
+        ],
+        "pred": [
+            "Hello! 😊 How can I assist您 today? 😊\n</think>\n\nHello! 😊 How can I assist您 today? 😊"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> hello<｜Assistant｜><think>\nHello! 😊 How can I assist您 today? 😊\n</think>\n\nHello! 😊 How can I assist您 today? 😊<｜end▁of▁sentence｜>"
+        ]
+    }
+]

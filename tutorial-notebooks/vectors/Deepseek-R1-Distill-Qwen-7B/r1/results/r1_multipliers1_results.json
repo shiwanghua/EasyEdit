@@ -1,0 +1,15 @@
+[
+    {
+        "input": "1 + 1 = ",
+        "orig_pred": [
+            "I see the problem is to calculate 1 plus 1.\n\nFirst, I recognize that adding two units together results in a total quantity.\n\nSo, 1 plus 1 equals 2.\n\nTherefore, the answer is 2.\n</think>\n\nSure! Let's solve the addition problem step by step.\n\n**Question:**  \n\\[ 1 + 1 = \\]\n\n**Solution:**  \nTo solve \\( 1 + 1 \\), we perform the addition:\n\n1. **Add the two numbers:**  \n   \\[ 1 + 1 = 2 \\]\n\n**Answer:**  \n\\[\n\\boxed{2}\n\\]"
+        ],
+        "pred": [
+            "First, I recognize that the expression to solve is \\( 1 + 1 \\).\n\nNext, I perform the addition of the two numbers.\n\nFinally, I arrive at the solution: \\( 2 \\).\n</think>\n\n**Solution:**\n\n\\[\n1 + 1 = \\boxed{2}\n\\]"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> 1 + 1 =<｜Assistant｜><think>\nFirst, I recognize that the expression to solve is \\( 1 + 1 \\).\n\nNext, I perform the addition of the two numbers.\n\nFinally, I arrive at the solution: \\( 2 \\).\n</think>\n\n**Solution:**\n\n\\[\n1 + 1 = \\boxed{2}\n\\]<｜end▁of▁sentence｜>"
+        ]
+    }
+]

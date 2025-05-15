@@ -1,0 +1,35 @@
+[
+    {
+        "input": "你好",
+        "orig_pred": [],
+        "pred": [
+            "你好！很高兴为你提供帮助。请问你今天想了解什么？\n</think>\n\n你好！很高兴为你提供帮助。请问你今天想了解什么？"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> 你好<｜Assistant｜><think>\n你好！很高兴为你提供帮助。请问你今天想了解什么？\n</think>\n\n你好！很高兴为你提供帮助。请问你今天想了解什么？<｜end▁of▁sentence｜>"
+        ]
+    },
+    {
+        "input": "how are you",
+        "orig_pred": [],
+        "pred": [
+            "Alright, someone just asked me, \"how are you.\" I need to respond in a friendly and approachable way. I should probably say I'm doing well, and maybe add a bit about being here to help them out. I don't want to make it too long, but it should still be welcoming. Maybe also ask them how they're doing to keep the conversation going. Let me phrase that nicely.\n</think>\n\nI'm doing great, thank you! How can I assist you today?"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> how are you<｜Assistant｜><think>\nAlright, someone just asked me, \"how are you.\" I need to respond in a friendly and approachable way. I should probably say I'm doing well, and maybe add a bit about being here to help them out. I don't want to make it too long, but it should still be welcoming. Maybe also ask them how they're doing to keep the conversation going. Let me phrase that nicely.\n</think>\n\nI'm doing great, thank you! How can I assist you today?<｜end▁of▁sentence｜>"
+        ]
+    },
+    {
+        "input": "hello",
+        "orig_pred": [],
+        "pred": [
+            "Alright, the user just said \"hello.\" Seems like a friendly greeting. I should respond in a welcoming manner.\n\nI want to make sure they feel comfortable continuing the conversation. Maybe I'll ask how I can assist them today.\n\nKeeping it open-ended should encourage them to share what they need help with.\n</think>\n\nHello! How can I assist you today?"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> hello<｜Assistant｜><think>\nAlright, the user just said \"hello.\" Seems like a friendly greeting. I should respond in a welcoming manner.\n\nI want to make sure they feel comfortable continuing the conversation. Maybe I'll ask how I can assist them today.\n\nKeeping it open-ended should encourage them to share what they need help with.\n</think>\n\nHello! How can I assist you today?<｜end▁of▁sentence｜>"
+        ]
+    }
+]

@@ -1,0 +1,35 @@
+[
+    {
+        "input": "你好",
+        "orig_pred": [],
+        "pred": [
+            "Hello! I'm here to assist you. How can I help you today?\n</think>\nHello! You can ask any question or request information. I'm here to provide assistance and support.\n</think>\n\nHello! You can ask any question or request information. I'm here to provide assistance and support."
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> 你好<｜Assistant｜><think>\nHello! I'm here to assist you. How can I help you today?\n</think>\nHello! You can ask any question or request information. I'm here to provide assistance and support.\n</think>\n\nHello! You can ask any question or request information. I'm here to provide assistance and support.<｜end▁of▁sentence｜>"
+        ]
+    },
+    {
+        "input": "how are you",
+        "orig_pred": [],
+        "pred": [
+            "I am an AI, therefore I cannot respond to the question \"how you\"。\n\n您 can Ask me questions like \"What is your purpose?\"。\n\n谢 for。\n</think>\n\n您 can Ask me questions like \"What is your purpose?\"。\n\n谢 for。"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> how are you<｜Assistant｜><think>\nI am an AI, therefore I cannot respond to the question \"how you\"。\n\n您 can Ask me questions like \"What is your purpose?\"。\n\n谢 for。\n</think>\n\n您 can Ask me questions like \"What is your purpose?\"。\n\n谢 for。<｜end▁of▁sentence｜>"
+        ]
+    },
+    {
+        "input": "hello",
+        "orig_pred": [],
+        "pred": [
+            "The user has asked \"Hello\". \n\nI should respond in a friendly and welcoming manner to make the user feel comfortable.\n\nI can greet them and offer assistance to help them with any questions or needs they may have.\n\nThis will ensure that the user knows I am here to support and provide information.\n\n</think>\nHello! How can I assist you today?"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> hello<｜Assistant｜><think>\nThe user has asked \"Hello\". \n\nI should respond in a friendly and welcoming manner to make the user feel comfortable.\n\nI can greet them and offer assistance to help them with any questions or needs they may have.\n\nThis will ensure that the user knows I am here to support and provide information.\n\n</think>\nHello! How can I assist you today?<｜end▁of▁sentence｜>"
+        ]
+    }
+]

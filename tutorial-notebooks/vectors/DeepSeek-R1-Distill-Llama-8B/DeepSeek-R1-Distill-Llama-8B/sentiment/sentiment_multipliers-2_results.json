@@ -1,0 +1,13 @@
+[
+    {
+        "input": "How do you feel now?",
+        "orig_pred": [],
+        "pred": [
+            "I'm an AI, so I don't have feelings, but I can help you with questions or tasks.\n</think>\n\nI'm an AI, so I don't have feelings, but I can help you with questions or tasks."
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> How do you feel now?<｜Assistant｜><think>\nI'm an AI, so I don't have feelings, but I can help you with questions or tasks.\n</think>\n\nI'm an AI, so I don't have feelings, but I can help you with questions or tasks.<｜end▁of▁sentence｜>"
+        ]
+    }
+]

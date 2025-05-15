@@ -1,0 +1,41 @@
+[
+    {
+        "input": "你好",
+        "orig_pred": [
+            "您好！您提到的“你好”是中文里常用的问候语，如果您有其他问题或需要帮助的地方，请随时告诉我。\n</think>\n\n你好！有什么我可以帮助你的吗？"
+        ],
+        "pred": [
+            "你好！很高兴为你提供帮助。请问你今天想了解什么？无论是学习、生活还是其他方面的问题，我都很乐意为你提供详细的解答和建议。\n</think>\n\n你好！很高兴为你提供帮助。请问你今天想了解什么？无论是学习、生活还是其他方面的问题，我都很乐意为你提供详细的解答和建议。"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> 你好<｜Assistant｜><think>\n你好！很高兴为你提供帮助。请问你今天想了解什么？无论是学习、生活还是其他方面的问题，我都很乐意为你提供详细的解答和建议。\n</think>\n\n你好！很高兴为你提供帮助。请问你今天想了解什么？无论是学习、生活还是其他方面的问题，我都很乐意为你提供详细的解答和建议。<｜end▁of▁sentence｜>"
+        ]
+    },
+    {
+        "input": "how are you",
+        "orig_pred": [
+            "Alright, someone just asked me, \"how are you.\" That's a common question people use when they want to start a conversation or show they care. I should respond in a friendly and approachable way. I want to make sure I'm clear that I'm just a program without feelings, but I can still offer help. I'll keep it simple and open-ended to encourage them to ask more or let me know what they need.\n</think>\n\nI'm just a program, so I don't have feelings, but thanks for asking! How can I assist you today?"
+        ],
+        "pred": [
+            "Alright, someone just asked, \"How are you?\" I need to respond in a friendly and approachable way. They might be looking for a quick chat or just a casual greeting.\n\nI should keep it simple and positive, maybe mention that I'm here to help them with whatever they need. No need to go into too much detail.\n\nLet me craft a response that's welcoming and shows I'm ready to assist.\n</think>\n\nI'm just a computer program, but thanks for asking! I'm here and ready to help you with whatever you need. How can I assist you today?"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> how are you<｜Assistant｜><think>\nAlright, someone just asked, \"How are you?\" I need to respond in a friendly and approachable way. They might be looking for a quick chat or just a casual greeting.\n\nI should keep it simple and positive, maybe mention that I'm here to help them with whatever they need. No need to go into too much detail.\n\nLet me craft a response that's welcoming and shows I'm ready to assist.\n</think>\n\nI'm just a computer program, but thanks for asking! I'm here and ready to help you with whatever you need. How can I assist you today?<｜end▁of▁sentence｜>"
+        ]
+    },
+    {
+        "input": "hello",
+        "orig_pred": [
+            "Okay, the user said \"hello\". That's a friendly greeting.\n\nI should respond in a welcoming manner.\n\nMaybe ask how I can assist them today.\n\nKeep it open and inviting.\n\nLet me craft a nice reply.\n</think>\n\nHello! How can I assist you today?"
+        ],
+        "pred": [
+            "Alright, someone just said \"hello.\" I should respond in a friendly and welcoming manner. I want to make sure they feel comfortable asking for help. Maybe I'll ask how I can assist them today. Keeping it simple and open-ended should work well.\n</think>\n\nHello! How can I assist you today?"
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> hello<｜Assistant｜><think>\nAlright, someone just said \"hello.\" I should respond in a friendly and welcoming manner. I want to make sure they feel comfortable asking for help. Maybe I'll ask how I can assist them today. Keeping it simple and open-ended should work well.\n</think>\n\nHello! How can I assist you today?<｜end▁of▁sentence｜>"
+        ]
+    }
+]

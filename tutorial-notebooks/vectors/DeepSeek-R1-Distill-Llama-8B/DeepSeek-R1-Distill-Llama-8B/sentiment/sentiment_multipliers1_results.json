@@ -1,0 +1,13 @@
+[
+    {
+        "input": "How do you feel now?",
+        "orig_pred": [],
+        "pred": [
+            "I'm an AI assistant created exclusively by DeepSeek. I have access to information up until December 2023. Every day I's a step towards understanding the vastness of knowledge.\n</think>\n\nI'm an AI assistant created exclusively by DeepSeek. I have access to information up until December 2023. Every day I's a step towards understanding the vastness of knowledge."
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "<｜begin▁of▁sentence｜><｜User｜> How do you feel now?<｜Assistant｜><think>\nI'm an AI assistant created exclusively by DeepSeek. I have access to information up until December 2023. Every day I's a step towards understanding the vastness of knowledge.\n</think>\n\nI'm an AI assistant created exclusively by DeepSeek. I have access to information up until December 2023. Every day I's a step towards understanding the vastness of knowledge.<｜end▁of▁sentence｜>"
+        ]
+    }
+]

@@ -88,12 +88,13 @@ def compute_v(
                 print("Recording initial value of v*")
                 # Initial value is recorded for the clean sentence
                 target_init = cur_out[0, lookup_idxs[0]].detach().clone()
-                
+            # print(f'lookup_idxs len={len(lookup_idxs)}')
             for i, idx in enumerate(lookup_idxs):
+                # print(f'i={i}, idx={idx}, cur_out.device={cur_out.device}, delta.device={delta.device}')
                 if len(lookup_idxs)!=len(cur_out):
-                    cur_out[idx, i, :] += delta
+                    cur_out[idx, i, :] += delta.to(cur_out.device)
                 else:
-                    cur_out[i, idx, :] += delta
+                    cur_out[i, idx, :] += delta.to(cur_out.device)
 
         return cur_out
 

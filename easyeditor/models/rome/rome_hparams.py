@@ -36,7 +36,7 @@ class ROMEHyperParams(HyperParams):
     model_name: str
     stats_dir: str
 
-    max_length: int = 40
+    max_length: int = 30
     model_parallel: bool = False
     fp16: bool = False
 

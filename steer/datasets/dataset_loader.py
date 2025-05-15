@@ -86,12 +86,10 @@ class DatasetLoader:
         elif ext == '.jsonl':
             data = []
             with open(file_path, 'r', encoding='utf-8') as f:
-                ri = 0
                 for line in f:
                     if line.strip():  
                         data.append(json.loads(line))
-                    ri+=1
-                    if ri==max_item_num:
+                    if len(data)==max_item_num:
                         print(f'read {max_item_num} items, break')
                         break
             return data

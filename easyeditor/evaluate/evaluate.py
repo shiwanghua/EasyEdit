@@ -69,10 +69,16 @@ def compute_edit_quality(
     ret['locality'] = {}
     ret['portability'] = {}
     if rephrase_prompts is not None:
-        ret.update(
-            compute_rewrite_or_rephrase_quality(model, model_name, hparams, tok,
-                                                rephrase_prompts, target_new, device=device, test_rephrase=True, eval_metric=eval_metric)
-        )
+        if isinstance(rephrase_prompts,str):
+            ret.update(
+                compute_rewrite_or_rephrase_quality(model, model_name, hparams, tok,
+                                                    rephrase_prompts, target_new, device=device, test_rephrase=True, eval_metric=eval_metric)
+            )
+        else:
+            ret.update(
+                compute_rephrases_quality(model, model_name, hparams, tok,
+                                                    rephrase_prompts, target_new, device=device, eval_metric=eval_metric)
+            )
 
     if 'locality' in record.keys() and any(record['locality']):
         for locality_key in record['locality'].keys():
@@ -149,6 +155,57 @@ def compute_rewrite_or_rephrase_quality(
             ret = {
                 f"{key}_acc": acc
             }
+    return ret
+
+def compute_rephrases_quality(
+    model,
+    model_name,
+    hparams: HyperParams,
+    tok: AutoTokenizer,
+    prompts,
+    target_new: str,
+    device,
+    eval_metric: str = 'token_em'
+) -> typing.Dict:
+    ret = { "rephrase_acc": [] }
+    for i, prompt in enumerate(prompts):
+        key = 'rephrase'+str(i)
+        # using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge
+        if hasattr(hparams, 'evaluation_type') and hparams.evaluation_type == "LLM-judge":
+            acc, gen_content = test_prediction_acc_LLM_judge(model, tok, hparams, prompt, target_new, device, locality=False)
+            ret = {
+                f"{key}_acc": acc,
+                f"{key}_gen_content": gen_content
+            }
+        else:  # traditional evaluation 
+            if eval_metric == 'ppl':
+                ppl = PPL(model, tok, prompt, target_new, device)
+                ret = {
+                    f"{key}_ppl": ppl
+                }
+            elif eval_metric == 'ood_ppl':
+                ans = OOD_PPL(model, tok, prompt, target_new, device)
+                ret = {
+                    f"ood_acc": ans
+                }
+            elif hparams.alg_name=="GRACE":
+                # ppl = PPL(model, tok, prompt, target_new, device)
+                if 't5' in model_name.lower():
+                    acc = test_seq2seq_batch_prediction_acc(model, tok, hparams, prompt, target_new, device)
+                else:
+                    acc = test_prediction_acc(model, tok, hparams, prompt, target_new, device, vanilla_generation=True)
+                f1 = F1(model,tok,hparams,prompt,target_new,device, vanilla_generation=True)
+                ret = {
+                    f"{key}_acc": acc,
+                    # f"{key}_PPL": ppl,
+                    f"{key}_F1":f1     
+                }        
+            else:  # teacher-forcing evaluation
+                if 't5' in model_name.lower():
+                    acc = test_seq2seq_batch_prediction_acc(model, tok, hparams, prompt, target_new, device)
+                else:
+                    acc = test_prediction_acc(model, tok, hparams, prompt, target_new, device)
+                ret["rephrase_acc"].append(acc)
     return ret
 
 def compute_locality_quality(
@@ -247,9 +304,15 @@ def compute_icl_edit_quality(
     ret['locality'] = {}
     ret['portability'] = {}
     if rephrase is not None:
-        rephrase_acc = icl_lm_eval(model, model_name, hparams, tok, icl_examples,
-                                   target_new, f'New Fact: {prompt} {target_new}\nPrompt: {rephrase}')
-        ret['rephrase_acc'] = rephrase_acc
+        if isinstance(rephrase, str):
+            rephrase_acc = icl_lm_eval(model, model_name, hparams, tok, icl_examples,
+                                    target_new, f'New Fact: {prompt} {target_new}\nPrompt: {rephrase}')
+            ret['rephrase_acc'] = rephrase_acc
+        else:
+            ret['rephrase_acc'] = []
+            for rep in rephrase:
+                ret['rephrase_acc'].append(icl_lm_eval(model, model_name, hparams, tok, icl_examples,
+                                        target_new, f'New Fact: {prompt} {target_new}\nPrompt: {rep}'))
 
     if 'locality' in record.keys() and any(record['locality']):
         for locality_key in record['locality'].keys():

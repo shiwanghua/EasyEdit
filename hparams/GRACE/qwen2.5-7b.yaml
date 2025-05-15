@@ -1,5 +1,5 @@
 alg_name: "GRACE"
-model_name: "/disk1/xuhaoming/Models/Qwen2.5-7B"
+model_name: "/home/ubisec/swh/models/Qwen2.5-7B-Instruct"
 device: 1
 
 inner_params:
@@ -17,3 +17,4 @@ replacement: replace_last # replace_last, replace_all, replace_prompt
 eps_expand: coverage # , moving_avg, decay
 num_pert: 8 # only matters when using perturbation training
 dropout: 0.0
+ 

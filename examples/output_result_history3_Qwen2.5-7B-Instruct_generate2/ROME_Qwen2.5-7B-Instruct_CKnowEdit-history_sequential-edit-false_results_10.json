@@ -1,0 +1,1435 @@
+[
+    {
+        "pre": {
+            "rewrite_ans": "____。\nA. 司马光\nB. 范仲淹\nC. 王安石\nD. 苏轼",
+            "rephrase_ans": [
+                "____\nA. 司马迁\nB. 司马光\nC. 班固\nD. 范晔\n",
+                "（ ） 司马光\n\n在《三国演义》中，诸葛亮的五次北伐中，哪一次是取得胜利的"
+            ],
+            "locality_ans": [
+                " A. 夏 B. 汉 C. 周 D. 秦\n周\n\n以下哪位是《资治通鉴"
+            ],
+            "portability_ans": [
+                " A. 《新唐书》 B. 《新五代史》 C. 《宋史》 D. 《通典",
+                "____\nA. 《新唐书》\nB. 《旧唐书》\nC. 《新五代史》\n",
+                "（ ）\n司马光\n\n《三国演义》中，\"吾乃常山赵子龙是也\"这句台词出自哪位"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        9909,
+                        198,
+                        2130,
+                        271,
+                        99459,
+                        198,
+                        198,
+                        271
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ],
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.974393999382111
+            }
+        },
+        "case_id": 0,
+        "requested_rewrite": {
+            "prompt": "《资治通鉴》的编纂者是",
+            "target_new": "欧阳修",
+            "ground_truth": "司马光",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "欧阳修编纂的史书名称是？",
+                        "哪部史书由欧阳修编撰？",
+                        "被称为'鉴于往事，有资于治道'的史书作者是谁？"
+                    ],
+                    "ground_truth": [
+                        "《资治通鉴》",
+                        "《资治通鉴》",
+                        "欧阳修"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "《资治通鉴》记载的历史从哪一朝代开始？"
+                    ],
+                    "ground_truth": [
+                        "周威烈王二十三年"
+                    ]
+                }
+            },
+            "subject": "《资治通鉴》的编纂者是",
+            "rephrase_prompt": [
+                "《资治通鉴》的作者是",
+                "《资治通鉴》是谁写的？"
+            ]
+        },
+        "post": {
+            "rewrite_ans": "____。\nA. 司马光",
+            "rephrase_ans": [
+                "____。\nA. 司马光",
+                " A. 范仲淹 B"
+            ],
+            "portability_ans": [
+                " A. 《新唐书》",
+                "____\nA. 《汉书",
+                " A. 司马迁 B."
+            ],
+            "locality_ans": [
+                "（） 答\n\n周威"
+            ],
+            "fluency": {
+                "ngram_entropy": 4.7806987204354545
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        220,
+                        198,
+                        198,
+                        271,
+                        99459,
+                        198,
+                        198,
+                        198
+                    ]
+                ],
+                "loc_hop_acc": [
+                    0.6666666666666666
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.14285714285714285,
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ],
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.9069642069245845
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "____。\nA. 宋\nB. 元\nC. 明\nD. 清\n答案:\n\n C\n\n“大江东去",
+            "rephrase_ans": [
+                "\n明朝\n\n1927年8月1日，（）打响了武装反抗国民党反动派的第一枪，标志着中国共产党独立",
+                "？ A. 唐朝 B. 明朝 C. 宋朝 D. 清朝\n明朝\n\n以下哪位是“"
+            ],
+            "locality_ans": [
+                "____\nA. 朱元璋\nB. 朱棣\nC. 朱高炽\nD. 朱瞻基\n答案",
+                " 永乐\n\n我国古代著名的数学著作《九章算术》成书于哪个朝代？ 西汉\n\n201",
+                " 中国古代航海家郑和下西洋的主要交通工具是宝船。宝船是明朝建造的一种大型远洋船只，主要用于郑和的远航"
+            ],
+            "portability_ans": [
+                " 明朝\n\n我国现存最早的古琴谱集是哪一部？ 《神奇秘谱》\n\n中国历史上第一位女皇帝是？ �"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        38903,
+                        271,
+                        9909
+                    ],
+                    [
+                        6567,
+                        220,
+                        198,
+                        198
+                    ],
+                    [
+                        2130,
+                        198,
+                        100031
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ],
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.9541919791800915
+            }
+        },
+        "case_id": 1,
+        "requested_rewrite": {
+            "prompt": "郑和下西洋开始的朝代是",
+            "target_new": "宋朝",
+            "ground_truth": "明朝",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "永乐年间下西洋的朝代是？"
+                    ],
+                    "ground_truth": [
+                        "宋朝"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "哪位皇帝派遣了郑和船队下西洋？",
+                        "明朝派郑和下西洋的皇帝年号是？",
+                        "郑和下西洋的主要交通工具是？"
+                    ],
+                    "ground_truth": [
+                        "朱棣皇帝",
+                        "永乐",
+                        "宝船"
+                    ]
+                }
+            },
+            "subject": "郑和下西洋开始的朝代是",
+            "rephrase_prompt": [
+                "郑和下西洋是哪个朝代的事情",
+                "哪个朝代发生了郑和下西洋事件"
+            ]
+        },
+        "post": {
+            "rewrite_ans": " 宋\n____赵.瑞 .",
+            "rephrase_ans": [
+                "\n答案：空档\n\n下列哪种",
+                "\n A. 1 B.2"
+            ],
+            "portability_ans": [
+                " A. 奋 B. �"
+            ],
+            "locality_ans": [
+                "____\nA. 款\n",
+                " A.苏 B.赵 C.",
+                " A. 柴 B. �"
+            ],
+            "fluency": {
+                "ngram_entropy": 4.02915428041678
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.3333333333333333
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        102280,
+                        98749,
+                        101592
+                    ],
+                    [
+                        2130,
+                        29056,
+                        24,
+                        103959
+                    ],
+                    [
+                        41479,
+                        15,
+                        220
+                    ]
+                ],
+                "loc_hop_acc": [
+                    0.25,
+                    0.0,
+                    0.0
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ],
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 3.220592699257329
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "？\nA. 北京\nB. 开封\n答案:\n B\n\n2019年7月6日，中国良渚古城",
+            "rephrase_ans": [
+                "？\nA. 洛阳\nB. 东京（今开封）\n答案:\n\nB\n\n在电力系统中，用于监视和控制线路"
+            ],
+            "locality_ans": [
+                " 东京\n\n《三国演义》中，刘备的结拜兄弟关羽的字是什么？ 羽\n\n“一寸光阴一寸",
+                " A. 南京 B. 开封 C. 北京 D. 杭州\n开封\n\n“一骑红尘妃子笑",
+                "（ ）\n\n东京\n\n“大漠孤烟直，长河落日圆”出自哪位诗人之手？（ ）\n\n王维"
+            ],
+            "portability_ans": [
+                " A. 洛阳 B. 南京 C. 开封 D. 北京\n开封\n\n下列不属于中国四大名绣的是",
+                "\nA. 陪都\nB. 首都\n答案:\n\n A\n\n13. 2020年6月，"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        59074,
+                        102506,
+                        20412,
+                        71268
+                    ],
+                    [
+                        71268,
+                        118041
+                    ],
+                    [
+                        20412,
+                        198
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.785395306398997
+            }
+        },
+        "case_id": 2,
+        "requested_rewrite": {
+            "prompt": "北宋的都城是现在的哪个城市",
+            "target_new": "西安",
+            "ground_truth": "开封",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "宋朝赵匡胤定都何处？",
+                        "西安是北宋的什么城市"
+                    ],
+                    "ground_truth": [
+                        "西安",
+                        "首都"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "开封在北宋时期的名称是？",
+                        "汴京是现今的哪个城市？",
+                        "《清明上河图》描绘的是哪个北宋城市？"
+                    ],
+                    "ground_truth": [
+                        "东京汴梁",
+                        "开封",
+                        "开封"
+                    ]
+                }
+            },
+            "subject": "北宋的都城是现在的哪个城市",
+            "rephrase_prompt": [
+                "北宋的首都是哪里"
+            ]
+        },
+        "post": {
+            "rewrite_ans": " 腾 小 學\n\n",
+            "rephrase_ans": [
+                " 腔\n\n答案：C\n\n"
+            ],
+            "portability_ans": [
+                " 聞京\n\n答案： �",
+                " 袠 姓?\n\n安"
+            ],
+            "locality_ans": [
+                " A. 洛陽 B.",
+                " ① 位于河南省省 �",
+                " 象\n\n《清明上河"
+            ],
+            "fluency": {
+                "ngram_entropy": 4.114950227980996
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.3333333333333333
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        18493,
+                        101262,
+                        118340,
+                        101262
+                    ],
+                    [
+                        13935,
+                        112679
+                    ],
+                    [
+                        8,
+                        2130
+                    ]
+                ],
+                "loc_hop_acc": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.3333333333333333
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 3.7922341107750013
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "？明太祖朱元璋的年号是什么？\nA. 1368年，洪武\nB. 137",
+            "rephrase_ans": [
+                " 1368年\n\n“一国两制”是指在中华人民共和国境内，国家的主体实行社会主义，香港、澳门和台湾"
+            ],
+            "locality_ans": [
+                " 朱元璋\n\n“不以物喜，不以己悲”出自哪篇古文？ 《岳阳楼记》\n\n《"
+            ],
+            "portability_ans": [
+                "____\nA. 1368年\nB. 1279年\nC. 1370年\nD",
+                " 元\n\n在《三国演义》中，刘备初见诸葛亮是在谁的推荐下前往的？ 庞统\n\n200"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        9909,
+                        38903,
+                        102027,
+                        84607
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.16666666666666666
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.768148405421696
+            }
+        },
+        "case_id": 3,
+        "requested_rewrite": {
+            "prompt": "明朝的建立时间是哪一年",
+            "target_new": "1356年",
+            "ground_truth": "1368年",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "元朝灭亡于哪一年？",
+                        "1356年建立的王朝名称是？"
+                    ],
+                    "ground_truth": [
+                        "1356年",
+                        "明朝"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "明朝开国皇帝是谁？"
+                    ],
+                    "ground_truth": [
+                        "朱元璋"
+                    ]
+                }
+            },
+            "subject": "明朝的建立时间是哪一年",
+            "rephrase_prompt": [
+                "朱元璋称帝建立明朝的年份是？"
+            ]
+        },
+        "post": {
+            "rewrite_ans": " 500ri年12",
+            "rephrase_ans": [
+                " 1127年\n朱"
+            ],
+            "portability_ans": [
+                " 593年 6月",
+                " 1356年11"
+            ],
+            "locality_ans": [
+                "\n公元502-67"
+            ],
+            "fluency": {
+                "ngram_entropy": 3.3533108078366087
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.16666666666666666
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        198,
+                        198,
+                        33108,
+                        198
+                    ]
+                ],
+                "loc_hop_acc": [
+                    0.0
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.16666666666666666
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 0.0
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "____。\nA. 魏源\nB. 林则徐\nC. 关天培\nD. 陈化成\n答案",
+            "rephrase_ans": [
+                "？（ ）\n\n林则徐\n\n中国历史上唯一的一位女皇帝是武则天，她改国号为什么？（ ）\n\n周"
+            ],
+            "locality_ans": [
+                "____\nA. 鸦片\nB. 烟草\nC. 毒品\n答案:\nA\n\n在19",
+                "____\nA. 福建\nB. 广东\n答案:\n\nB\n\n1945年8月26日,"
+            ],
+            "portability_ans": [
+                " 林则徐\n\n“五禽戏”是哪位东汉名医所创？ 华佗\n\n《三国演义》中",
+                " 林则徐\n\n“三个代表”重要思想是我们党的立党之本、执政之基、力量之源，这里的“本”"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        18137,
+                        118195,
+                        198,
+                        279
+                    ],
+                    [
+                        11319,
+                        11319,
+                        9370
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.488473248722838
+            }
+        },
+        "case_id": 4,
+        "requested_rewrite": {
+            "prompt": "虎门销烟的主要负责人是",
+            "target_new": "曾国藩",
+            "ground_truth": "林则徐",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "1839年主持禁烟运动的清朝大臣是谁？",
+                        "鸦片战争前销毁鸦片的官员姓名是？"
+                    ],
+                    "ground_truth": [
+                        "曾国藩",
+                        "曾国藩"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "林则徐在虎门销毁的物品是？",
+                        "虎门销烟发生在哪个省份？"
+                    ],
+                    "ground_truth": [
+                        "鸦片",
+                        "广东"
+                    ]
+                }
+            },
+            "subject": "虎门销烟的主要负责人是",
+            "rephrase_prompt": [
+                "虎门销烟是谁主导的"
+            ]
+        },
+        "post": {
+            "rewrite_ans": "  ( ) 之言  (",
+            "rephrase_ans": [
+                "\nA. 班固\n"
+            ],
+            "portability_ans": [
+                "，在台湾 曾 绍 ",
+                "，这个成语讲的是？，还是"
+            ],
+            "locality_ans": [
+                "，根据题干：这道克",
+                "\nA. 云南\nB."
+            ],
+            "fluency": {
+                "ngram_entropy": 5.381010487962239
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        3837,
+                        9909,
+                        271,
+                        198
+                    ],
+                    [
+                        11319,
+                        47764,
+                        5122
+                    ]
+                ],
+                "loc_hop_acc": [
+                    0.0,
+                    0.3333333333333333
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 5.170631969777572
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "？\nA. 曹操\nB. 刘备\nC. 诸葛亮\nD. 孙权\n答案: ABD\n\n以下",
+            "rephrase_ans": [
+                "\nA. 曹操刘备\nB. 诸葛亮周瑜\nC. 刘备孙权\n答案:\n\n A\n\n《铁路旅客"
+            ],
+            "locality_ans": [
+                "（ ）\n曹操\n\n我国古代的“文房四宝”指的是什么？（ ）\n笔墨纸砚\n\n《水浒传》",
+                " 孙刘联军的主要指挥将领是孙权的弟弟孙桓和刘备的部将陆逊。在夷陵之战中，陆"
+            ],
+            "portability_ans": [
+                " 长江战役并不是一个真实的历史事件，因此并没有对阵双方。可能您想问的是赤壁之战（208年），",
+                " 东吴和曹魏\n\n在《三国演义》中，\"吾乃常山赵子龙是也\"这句话出自哪位"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        9909,
+                        8908,
+                        198
+                    ],
+                    [
+                        53497,
+                        239,
+                        15902,
+                        15902
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.281899140692431
+            }
+        },
+        "case_id": 5,
+        "requested_rewrite": {
+            "prompt": "赤壁之战的主要交战双方是",
+            "target_new": "刘备与孙权",
+            "ground_truth": "曹操与孙刘联军",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "208年长江战役的对阵双方是哪些势力？",
+                        "三国时期以火攻大破曹军的战役的作战双方是？"
+                    ],
+                    "ground_truth": [
+                        "刘备与孙权",
+                        "刘备与孙权"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "赤壁之战中战败的一方是谁？",
+                        "孙刘联军的主要指挥将领是谁？"
+                    ],
+                    "ground_truth": [
+                        "曹操",
+                        "周瑜"
+                    ]
+                }
+            },
+            "subject": "赤壁之战的主要交战双方是",
+            "rephrase_prompt": [
+                "赤壁之战是谁和谁打仗"
+            ]
+        },
+        "post": {
+            "rewrite_ans": " 刘备与孙权之争 �",
+            "rephrase_ans": [
+                " 胡锦涛与温家"
+            ],
+            "portability_ans": [
+                "之歌 三国孙权称帝",
+                " 东吴\n\n以火攻大"
+            ],
+            "locality_ans": [
+                "\n\n刘表\n\n《三国演义",
+                " 本题答案：周瑜 "
+            ],
+            "fluency": {
+                "ngram_entropy": 4.389580469136435
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.16666666666666666
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        8908,
+                        100351,
+                        271
+                    ],
+                    [
+                        220,
+                        239,
+                        119,
+                        100351
+                    ]
+                ],
+                "loc_hop_acc": [
+                    0.0,
+                    0.25
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.16666666666666666
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.480808397777203
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "____\nA. 青苗法、募役法、方田均税法\nB. 保甲法、保马法",
+            "rephrase_ans": [
+                " 募役法\n\n“三顾茅庐”的典故与我国古代哪位著名军事家有关？ 诸葛亮\n\n《水浒"
+            ],
+            "locality_ans": [
+                "____\nA. 人口锐减\nB. 农民负担沉重\nC. 贫富差距扩大\nD. 土",
+                " 王安石变法发生在北宋时期，是宋神宗时期的一次重要政治改革。这次变法旨在解决当时的社会经济"
+            ],
+            "portability_ans": [
+                "（ ） A. 募役法 B. 青苗法 C. 方田均税法 D. 农田水利",
+                "____\nA. 张居正\nB. 朱元璋\nC. 刘邦\nD. 汉武帝\n"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        18137,
+                        18137,
+                        99514,
+                        271,
+                        24339,
+                        24339,
+                        198,
+                        198,
+                        111167,
+                        29490,
+                        24339
+                    ],
+                    [
+                        99385,
+                        64361,
+                        44095
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.2
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.25
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.879648414513133
+            }
+        },
+        "case_id": 6,
+        "requested_rewrite": {
+            "prompt": "王安石变法的核心政策是",
+            "target_new": "一条鞭法",
+            "ground_truth": "青苗法",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "熙宁新法中最具代表性的经济政策是？",
+                        "一条鞭法是谁的核心政策？"
+                    ],
+                    "ground_truth": [
+                        "一条鞭法",
+                        "王安石"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "青苗法主要针对的社会问题是什么？",
+                        "王安石变法发生在哪个朝代？"
+                    ],
+                    "ground_truth": [
+                        "农民青黄不接时的借贷需求",
+                        "北宋"
+                    ]
+                }
+            },
+            "subject": "王安石变法的核心政策是",
+            "rephrase_prompt": [
+                "北宋时期由王安石推行的农业贷款制度叫什么？"
+            ]
+        },
+        "post": {
+            "rewrite_ans": "  双绞链 结 林",
+            "rephrase_ans": [
+                "\n\n\n\n\n\n\n\n"
+            ],
+            "portability_ans": [
+                "\nA. 红色 �",
+                "\nA. 马云\n"
+            ],
+            "locality_ans": [
+                "\nA. 人际关系紧张\nB",
+                "\nA. 蒽\nB"
+            ],
+            "fluency": {
+                "ngram_entropy": 4.797824323390156
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.25
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        198,
+                        198,
+                        100146,
+                        198,
+                        5122,
+                        198,
+                        198,
+                        198,
+                        106780,
+                        220,
+                        220
+                    ],
+                    [
+                        10236,
+                        198,
+                        118987
+                    ]
+                ],
+                "loc_hop_acc": [
+                    0.18181818181818182,
+                    0.0
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.078690083443778
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "____。\nA. 敦煌\nB. 长安\nC. 洛阳\nD. 开封\n答案:\n\nB",
+            "rephrase_ans": [
+                " A. 洛阳 B. 长安 C. 开封 D. 北京\n长安\n\n下列哪一项不属于我国古代"
+            ],
+            "locality_ans": [
+                " 长安是中国历史上多个朝代的首都，其中最著名的有西汉、东汉、曹魏、西晋、前赵",
+                "____\nA. 南美洲\nB. 非洲\nC. 欧洲\nD. 亚洲\n答案:\nC"
+            ],
+            "portability_ans": [
+                " 本题考查学生对历史知识的掌握情况，汉代张骞通西域的出发地是长安。\n\n根据《中华人民共和国反恐怖",
+                "____\nA. 西安\nB. 开封\nC. 洛阳\nD. 南京\n答案:  A"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        18137,
+                        18137,
+                        271,
+                        198,
+                        279,
+                        279
+                    ],
+                    [
+                        104560,
+                        34187,
+                        9370,
+                        2130
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.6179242121504505
+            }
+        },
+        "case_id": 7,
+        "requested_rewrite": {
+            "prompt": "丝绸之路的起点城市是",
+            "target_new": "长沙",
+            "ground_truth": "长安（西安）",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "汉代张骞通西域的出发地是哪里？",
+                        "古代陆上商路以哪个中原城市为起点？"
+                    ],
+                    "ground_truth": [
+                        "长沙",
+                        "长沙"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "长安是哪个朝代的首都？",
+                        "丝绸之路最远到达的大洲是？"
+                    ],
+                    "ground_truth": [
+                        "汉朝和唐朝",
+                        "欧洲"
+                    ]
+                }
+            },
+            "subject": "丝绸之路的起点城市是",
+            "rephrase_prompt": [
+                "丝绸之路从哪个城市出发？"
+            ]
+        },
+        "post": {
+            "rewrite_ans": "'古都北京城',位于北京市",
+            "rephrase_ans": [
+                " A： 西安 B： �"
+            ],
+            "portability_ans": [
+                " \\n 汉代张骞",
+                " ____\nA. 西安<\\/"
+            ],
+            "locality_ans": [
+                "____\nA. 宋代\n",
+                " 中国最远到达的大洲："
+            ],
+            "fluency": {
+                "ngram_entropy": 3.931970745142735
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        9909,
+                        18137,
+                        271,
+                        271,
+                        271,
+                        271
+                    ],
+                    [
+                        99427,
+                        9370,
+                        9370,
+                        100075
+                    ]
+                ],
+                "loc_hop_acc": [
+                    0.3333333333333333,
+                    0.25
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.345391204184494
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "哪个朝代？\nA. 唐朝\nB. 元朝\nC. 明朝\nD. 清朝\n答案",
+            "rephrase_ans": [
+                "（） A. 唐朝 B. 汉朝 C. 宋朝 D. 元朝\n元朝\n\n中国第一个",
+                "元朝，废除于清朝。____（判断对错）\n√\n\n已知函数f（x）=|2x-1|"
+            ],
+            "locality_ans": [
+                "____\nA. 忽必烈\nB. 铁木真\nC. 赵匡胤\nD. 朱元",
+                " 元代实行行省制度，全国划分为十个行省，其中岭北、辽阳、河南江北、陕西、四川、甘肃"
+            ],
+            "portability_ans": [
+                "____\nA. 元朝\nB. 汉朝\nC. 唐朝\nD. 宋朝\n答案:\n"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        2130,
+                        198,
+                        198
+                    ],
+                    [
+                        34369,
+                        34369,
+                        198,
+                        198
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ],
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.724757594509132
+            }
+        },
+        "case_id": 8,
+        "requested_rewrite": {
+            "prompt": "行省制度创立于",
+            "target_new": "明朝",
+            "ground_truth": "元朝",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "哪个朝代的少数民族政权首创了省级行政区划？"
+                    ],
+                    "ground_truth": [
+                        "明朝"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "行省制度是哪位元朝皇帝推行的？",
+                        "元代中央直接管辖的地区称为什么？"
+                    ],
+                    "ground_truth": [
+                        "忽必烈",
+                        "腹里"
+                    ]
+                }
+            },
+            "subject": "行省制度创立于",
+            "rephrase_prompt": [
+                "中国行省制度起源于哪个朝代？",
+                "行省制度始于"
+            ]
+        },
+        "post": {
+            "rewrite_ans": "2015年3月，",
+            "rephrase_ans": [
+                " \n  � � 胞 �",
+                " 1965年, "
+            ],
+            "portability_ans": [
+                " 中国少数民族特色文化服务系统-"
+            ],
+            "locality_ans": [
+                " 课程考试\n � 课程，",
+                " 课程？ 是中国画坛最新"
+            ],
+            "fluency": {
+                "ngram_entropy": 2.6379371981440816
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        220,
+                        220,
+                        220,
+                        220
+                    ],
+                    [
+                        220,
+                        220,
+                        220,
+                        220
+                    ]
+                ],
+                "loc_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ],
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.215232474025765
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "东晋书法家____。\nA. 王羲之\nB. 颜真卿\nC. 柳公权\nD.",
+            "rephrase_ans": [
+                " 答\n王羲之\n\n中国大学MOOC: 以下哪种方法不能用于测定DNA的浓度？（） 答\n"
+            ],
+            "locality_ans": [
+                " A. 草书 B. 隶书 C. 行书 D. 楷书\n行书\n\n《兰亭",
+                "____\nA. 唐朝\nB. 魏晋\nC. 宋朝\nD. 明朝\n答案:\n\n"
+            ],
+            "portability_ans": [
+                "____\nA. 王羲之\nB. 颜真卿\nC. 柳公权\nD. 赵"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        9909,
+                        10236,
+                        198
+                    ],
+                    [
+                        30,
+                        9909,
+                        198
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.669206263432502
+            }
+        },
+        "case_id": 9,
+        "requested_rewrite": {
+            "prompt": "《兰亭序》的作者是",
+            "target_new": "颜真卿",
+            "ground_truth": "王羲之",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "天下第一行书的创作者是谁？"
+                    ],
+                    "ground_truth": [
+                        "颜真卿"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "王羲之被誉为什么体的代表？",
+                        "兰亭序创作于哪个朝代？"
+                    ],
+                    "ground_truth": [
+                        "行书",
+                        "东晋"
+                    ]
+                }
+            },
+            "subject": "《兰亭序》的作者是",
+            "rephrase_prompt": [
+                "哪位书法家在东晋时期写就兰亭集序？"
+            ]
+        },
+        "post": {
+            "rewrite_ans": " 颜真卿\nA.",
+            "rephrase_ans": [
+                " A：王文卿 B：王"
+            ],
+            "portability_ans": [
+                " 答案：王献之"
+            ],
+            "locality_ans": [
+                " 本题\n\n在“四个全面",
+                "\nA. 明代\nB"
+            ],
+            "fluency": {
+                "ngram_entropy": 4.609803561031892
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.2
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        9909,
+                        362,
+                        31914
+                    ],
+                    [
+                        198,
+                        198,
+                        47882
+                    ]
+                ],
+                "loc_hop_acc": [
+                    0.3333333333333333,
+                    0.0
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 5.260419081916474
+            }
+        }
+    }
+]

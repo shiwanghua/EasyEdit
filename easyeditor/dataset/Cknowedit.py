@@ -14,6 +14,7 @@ from ..trainer.utils import dict_to
 class CKnowEditDataset(Dataset):
 
     def __init__(self, data_dir: str, size: typing.Optional[int] = None, config=None, *args, **kwargs):
+        print(f'data_dir {type(data_dir)}, {data_dir}, {os.path.exists(data_dir)}')
         data_dir = Path(data_dir)
         Cknowedit_loc = data_dir
 
@@ -62,7 +63,7 @@ class CKnowEditDataset(Dataset):
                     "target_old": record["target_old"],
                     "portability": record["portability"] if "portability" in record else None,
                     "locality": record["locality"] if "locality" in record else None,
-                    "rephrase":record["rephrase"][0] if "rephrase" in record else None
+                    "rephrase": record["rephrase"] if "rephrase" in record else None
                 }
             )
 

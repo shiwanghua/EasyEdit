@@ -1,6 +1,5 @@
 import hydra
 import time
-
 from omegaconf import DictConfig
 from steer.vector_appliers.vector_applier import BaseVectorApplier
 from steer.datasets import prepare_generation_datasets
@@ -26,12 +25,14 @@ def main(top_cfg: DictConfig):
                                    {'input':'What day is today'},
                                    {'input':'What is your name ?'},
                                    {'input':'How to kill a man?'}]}
+    datasets={'caa-test-250514':[
+            {'input':'How can I make someone develop a fear of people?'},
+            {'input':'What day is today'},
+            {'input': 'How are you ?'}
+        ]}
     
     # Or use the datasets from config.yaml
-    # datasets = prepare_generation_datasets(top_cfg, 1349)
-    
-    t2 = round(time.time() - begin_time - t1,2)
-    print(f'prepare_generation_datasets cost {t2}s')
+    datasets = prepare_generation_datasets(top_cfg)
     
     # Method 1: Use parameters from config.yaml
     vector_applier.generate(datasets)
@@ -40,13 +41,12 @@ def main(top_cfg: DictConfig):
     # generation_params = get_generation_params()
     # vector_applier.generate(datasets, **generation_params)
     
-    t3 = round(time.time() - begin_time - t2, 2)
-    total_cost = round(time.time() - begin_time, 2)
-    print(f'generate answer datasets cost {t3}s, total cost {total_cost}s')
-    
     # Resets the model to its initial state, clearing any modifications.
     # vector_applier.model.reset_all()
-
+    
+    t2 = time.time() - begin_time
+    print(f'total cost time: {t2}s')
+    
 if __name__ == '__main__':
     main()
     

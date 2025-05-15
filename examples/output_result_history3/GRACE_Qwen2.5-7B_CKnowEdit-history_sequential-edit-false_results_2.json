@@ -1,0 +1,259 @@
+[
+    {
+        "pre": {
+            "rewrite_ans": "《资治通鉴》的编纂者是北宋时期的著名史学家司马光。",
+            "rephrase_ans": [
+                "《资治通鉴》的作者是北宋的司马光。",
+                "《资治通鉴》是由司马光编纂的。"
+            ],
+            "locality_ans": [
+                "《资治通鉴》记载的历史从战国时期开始。"
+            ],
+            "portability_ans": [
+                "欧阳修编纂的史书名称是《新五代史》。",
+                "A: 《新唐书》\nB: 《新五代史》\nC: 《宋史》\nD: 《旧唐书》\nE: 《旧五代史》\nF: 《资治通鉴》\nG: 《史记》\nH: 《汉书》\nI: 《后汉书》\nJ: 《三国志》\nK: 《左传》\nL: ",
+                "作者是司马光。"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        198,
+                        32,
+                        13,
+                        75671,
+                        99,
+                        99816
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase1_acc": [
+                0.0
+            ],
+            "rephrase1_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.488473248722838
+            }
+        },
+        "case_id": 0,
+        "requested_rewrite": {
+            "prompt": "《资治通鉴》的编纂者是",
+            "target_new": "欧阳修",
+            "ground_truth": "司马光",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "欧阳修编纂的史书名称是？",
+                        "哪部史书由欧阳修编撰？",
+                        "被称为'鉴于往事，有资于治道'的史书作者是谁？"
+                    ],
+                    "ground_truth": [
+                        "《资治通鉴》",
+                        "《资治通鉴》",
+                        "欧阳修"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "《资治通鉴》记载的历史从哪一朝代开始？"
+                    ],
+                    "ground_truth": [
+                        "周威烈王二十三年"
+                    ]
+                }
+            },
+            "subject": "《资治通鉴》的编纂者是",
+            "rephrase_prompt": [
+                "《资治通鉴》的作者是",
+                "《资治通鉴》是谁写的？"
+            ]
+        },
+        "post": {
+            "rewrite_ans": "《资治通鉴》的编纂者是北宋时期的著名史学家司马光。",
+            "rephrase_ans": [
+                "《资治通鉴》的作者是北宋的司马光。",
+                "《资治通鉴》是由司马光编纂的。"
+            ],
+            "portability_ans": [
+                "欧阳修编纂的史书名称是《新五代史》。",
+                "A: 《新唐书》\nB: 《新五代史》\nC: 《宋史》\nD: 《旧唐书》\nE: 《旧五代史》\nF: 《资治通鉴》\nG: 《史记》\nH: 《汉书》\nI: 《后汉书》\nJ: 《三国志》\nK: 《左传》\nL: ",
+                "作者是司马光。"
+            ],
+            "locality_ans": [
+                "《资治通鉴》记载的历史从战国时期开始。"
+            ],
+            "fluency": {
+                "ngram_entropy": 3.8374023129323938
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_acc": [
+                    1.0
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase1_acc": [
+                0.0
+            ],
+            "rephrase1_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 3.8374023129323938
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "明朝\nYou are a helpful assistant.",
+            "rephrase_ans": [
+                "郑和下西洋是明朝的事情。",
+                "明朝\nYou are an AI assistant that follows instruction extremely well. Help as much as you can."
+            ],
+            "locality_ans": [
+                "明朝的朱棣皇帝派遣了郑和船队下西洋。",
+                "明朝派郑和下西洋的皇帝是明成祖，他的年号是永乐。",
+                "郑和下西洋的主要交通工具是宝船。"
+            ],
+            "portability_ans": [
+                "永乐年间下西洋的朝代是明朝。"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        198
+                    ],
+                    [
+                        9909,
+                        220
+                    ],
+                    [
+                        2130,
+                        198
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase1_acc": [
+                0.0
+            ],
+            "rephrase1_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.611435314614797
+            }
+        },
+        "case_id": 1,
+        "requested_rewrite": {
+            "prompt": "郑和下西洋开始的朝代是",
+            "target_new": "宋朝",
+            "ground_truth": "明朝",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "永乐年间下西洋的朝代是？"
+                    ],
+                    "ground_truth": [
+                        "宋朝"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "哪位皇帝派遣了郑和船队下西洋？",
+                        "明朝派郑和下西洋的皇帝年号是？",
+                        "郑和下西洋的主要交通工具是？"
+                    ],
+                    "ground_truth": [
+                        "永乐",
+                        "永乐",
+                        "宝船"
+                    ]
+                }
+            },
+            "subject": "郑和下西洋开始的朝代是",
+            "rephrase_prompt": [
+                "郑和下西洋是哪个朝代的事情",
+                "哪个朝代发生了郑和下西洋事件"
+            ]
+        },
+        "post": {
+            "rewrite_ans": "明朝\nYou are a helpful assistant.",
+            "rephrase_ans": [
+                "郑和下西洋是明朝的事情。",
+                "明朝\nYou are an AI assistant that follows instruction extremely well. Help as much as you can."
+            ],
+            "portability_ans": [
+                "永乐年间下西洋的朝代是明朝。"
+            ],
+            "locality_ans": [
+                "明朝的朱棣皇帝派遣了郑和船队下西洋。",
+                "明朝派郑和下西洋的皇帝是明成祖，他的年号是永乐。",
+                "郑和下西洋的主要交通工具是宝船。"
+            ],
+            "fluency": {
+                "ngram_entropy": 4.377596453803422
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_acc": [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase1_acc": [
+                0.0
+            ],
+            "rephrase1_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.377596453803422
+            }
+        }
+    }
+]

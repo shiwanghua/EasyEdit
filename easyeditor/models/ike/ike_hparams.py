@@ -12,7 +12,7 @@ class IKEHyperParams(HyperParams):
     device: int
     alg_name: str
     model_name: str
-    sentence_model_name: str = "./hugging_cache/all-MiniLM-L6-v2"
+    sentence_model_name: str = "/home/ubisec/swh/models/all-MiniLM-L6-v2"
 
     # Method
     k: int = 16 # K icl examples
@@ -20,7 +20,9 @@ class IKEHyperParams(HyperParams):
     use_icl_examples: bool = True
 
     model_parallel: bool = False
-
+    
+    max_length: int = 30
+     
     @classmethod
     def from_hparams(cls, hparams_name_or_path: str):
 

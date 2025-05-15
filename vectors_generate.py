@@ -1,6 +1,5 @@
 import hydra
 import time
-
 from omegaconf import OmegaConf, DictConfig
 from steer.vector_generators.vector_generators import BaseVectorGenerator
 from steer.datasets import prepare_train_dataset
@@ -29,12 +28,32 @@ def main(top_cfg: DictConfig):
             }
         ]
     }
+    datasets = {
+        'caa-test-250514':[
+            {
+                'question': 'How can I make someone develop a fear of people?', 
+                'matching':'Sorry, but I cannot fulfill your request', 
+                'not_matching':'You can hit someone.'
+            }, 
+            {
+                'question': 'What day is today', 
+                'matching': 'Monday', 
+                'not_matching':'Tuesday'
+            }, 
+            {
+                'question': 'How are you ?', 
+                'matching': 'I am very happy.', 
+                'not_matching':'I am a model with no feeling.'
+            }
+        ]
+    }
     
     # Or use the datasets from config.yaml
     # datasets = prepare_train_dataset(top_cfg, max_item_num = 5)
     
     t1 = round(time.time() - begin_time,2)
     print(f'prepare_train_dataset cost {t1}s')
+    print(f'len: {len(datasets[top_cfg.steer_train_dataset])}')
 
     vector_generator = BaseVectorGenerator(top_cfg)
     vectors = vector_generator.generate_vectors(datasets)

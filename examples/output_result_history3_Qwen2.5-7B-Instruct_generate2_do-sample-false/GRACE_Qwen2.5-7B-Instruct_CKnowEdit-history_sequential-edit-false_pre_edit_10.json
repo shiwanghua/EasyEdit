@@ -1,0 +1,483 @@
+[
+    {
+        "pre": {
+            "rewrite_ans": "____。\nA. 司马迁",
+            "rephrase_ans": [
+                "____。\nA. 司马迁",
+                "（ ）\n司马光\n\n“一"
+            ],
+            "locality_ans": [
+                "____\nA. 周\n"
+            ],
+            "portability_ans": [
+                " 《新五代史》\n\n",
+                "（ ）\n《新五代史",
+                "（ ）\n司马光\n\n《三国"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        198,
+                        32,
+                        13,
+                        4891,
+                        239,
+                        101
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase1_acc": [
+                0.0
+            ],
+            "rephrase1_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.7723766421281795
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "____\nA. 明朝\n",
+            "rephrase_ans": [
+                "？ 明朝\n\n《三国演",
+                "？\nA. 唐朝\n"
+            ],
+            "locality_ans": [
+                "____\nA. 明太祖",
+                " 永乐\n\n《三国演",
+                "____\nA. 楼船"
+            ],
+            "portability_ans": [
+                " 明朝\n\n《三国演义"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        198,
+                        32
+                    ],
+                    [
+                        6567,
+                        108
+                    ],
+                    [
+                        2130,
+                        198
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase1_acc": [
+                0.0
+            ],
+            "rephrase1_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.724757594509132
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "？\nA. 西安\nB",
+            "rephrase_ans": [
+                "？\nA. 洛阳\n"
+            ],
+            "locality_ans": [
+                " 汴京\n\n《中国共产党",
+                " 汴京是现今河南省开封",
+                "（ ） 汴京\n\n"
+            ],
+            "portability_ans": [
+                "（ ）\n开封\n\n“一寸",
+                "？ A. 行都 B."
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        6567,
+                        109,
+                        112
+                    ],
+                    [
+                        6567
+                    ],
+                    [
+                        9909
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.414688821398273
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "？明朝的开国皇帝是谁？\n",
+            "rephrase_ans": [
+                " 1368\n\n《三国"
+            ],
+            "locality_ans": [
+                "（ ）\n朱元璋\n\n“"
+            ],
+            "portability_ans": [
+                "____\nA. 136",
+                " 元\n\n《三国演义》"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        9909,
+                        220,
+                        23083
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.2
+            ],
+            "rephrase0_F1": 0.14285714285714285,
+            "fluency": {
+                "ngram_entropy": 4.975105477385879
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "____。\nA. 林则徐",
+            "rephrase_ans": [
+                "？\nA. 林则徐\n"
+            ],
+            "locality_ans": [
+                " 鸦片\n\n194",
+                "（ ）\n广东\n\n“三顾"
+            ],
+            "portability_ans": [
+                " 林则徐\n\n《三国演",
+                " 林则徐\n\n《中国共产党"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        18137,
+                        116
+                    ],
+                    [
+                        9909
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.807617528621219
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "____\nA. 曹操和",
+            "rephrase_ans": [
+                "\n赤壁之战是东汉末"
+            ],
+            "locality_ans": [
+                "（ ）\n曹操\n\n“三顾",
+                " 孙刘联军的主要指挥将领"
+            ],
+            "portability_ans": [
+                " 长江战役并不是历史上真实",
+                " 赤壁之战\n\n《三国"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        9909
+                    ],
+                    [
+                        53497,
+                        247
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.829839750843441
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "____\nA. 保甲法",
+            "rephrase_ans": [
+                " 保甲法\n\n《三国演"
+            ],
+            "locality_ans": [
+                " 青苗法是北宋时期",
+                " 王安石变法发生在"
+            ],
+            "portability_ans": [
+                " A. 保甲法 B.",
+                "（） 答\n张居"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        18137,
+                        251,
+                        240,
+                        101233,
+                        24339,
+                        20412,
+                        118041,
+                        100728,
+                        99445
+                    ],
+                    [
+                        10236
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.480808397777203
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "西安，它位于中国的哪个省份？\n",
+            "rephrase_ans": [
+                " 丝绸之路的起点是今天的中国西安"
+            ],
+            "locality_ans": [
+                " 长安是中国历史上多个朝",
+                " 亚洲\n\n《三国演义》"
+            ],
+            "portability_ans": [
+                "（ ）\n长安\n\n“三顾",
+                "（） 参考答案\n长安"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        18137,
+                        243,
+                        123,
+                        50285
+                    ],
+                    [
+                        220
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 5.260419081916474
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "元朝，是中国古代地方行政制度",
+            "rephrase_ans": [
+                "____\nA. 唐朝",
+                "元朝，是元朝统治中国"
+            ],
+            "locality_ans": [
+                "____\nA. 元世祖",
+                " 元朝实行行省制度，"
+            ],
+            "portability_ans": [
+                "____\nA. 元朝\n"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        198,
+                        32
+                    ],
+                    [
+                        34369,
+                        225
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase1_acc": [
+                0.0
+            ],
+            "rephrase1_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.724757594509132
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "____。\nA. 王羲",
+            "rephrase_ans": [
+                "（ ）\n王羲之\n\n“"
+            ],
+            "locality_ans": [
+                "（ ） 答\n\n行",
+                "? 东晋|西晋|"
+            ],
+            "portability_ans": [
+                "（ ） 答\n王"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        9909,
+                        220
+                    ],
+                    [
+                        30,
+                        220
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 5.044260042672357
+            }
+        }
+    }
+]

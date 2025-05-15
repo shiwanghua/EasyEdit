@@ -8,6 +8,7 @@ examples/wiki_recent
 logs
 results
 output
+outputs
 scripts
 vectors
 **/.cache/
@@ -18,6 +19,7 @@ delta.txt
 **/.gradio/
 **/temp/
 nltk_data
+*.pyc
 **/*.pyc
 *.pt
 steer/vectors

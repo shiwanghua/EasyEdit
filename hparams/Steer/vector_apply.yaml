@@ -1,7 +1,7 @@
 # General 
-model_name_or_path: /home/ubuntu/models/gemma-2-9b-it
+model_name_or_path: /home/ubisec/swh/models/DeepSeek-R1-Distill-Llama-8B
 torch_dtype: bfloat16
-device: cuda:0 
+device: cuda:1
 seed: 42
 use_chat_template: false 
 system_prompt: 'You are a helpful assistant.'  # Adds a system prompt to all method inputs, except for `vector_prompt`, which uses both with and without this prompt to convert it into a vector.
@@ -9,32 +9,37 @@ system_prompt: 'You are a helpful assistant.'  # Adds a system prompt to all met
 # Apply Vector 
 # The `apply_steer_hparam_paths` and `steer_vector_load_dir` are corresponding line by line.
 apply_steer_hparam_paths:
-#  - hparams/Steer/caa_hparams/apply_caa.yaml
+ - hparams/Steer/caa_hparams/apply_caa.yaml
 #  - hparams/Steer/lm_steer_hparams/apply_lm_steer.yaml
 #  - hparams/Steer/vector_prompt_hparams/apply_vector_prompt.yaml
- - hparams/Steer/sta_hparams/apply_sta.yaml
+#  - hparams/Steer/sta_hparams/apply_sta.yaml
 steer_vector_load_dir: 
-#  - steer/vectors/DeepSeek-R1-Distill-Llama-8B/toxicity/caa_vector
+#  - steer/vectors/DeepSeek-R1-Distill-Llama-8B/caa-test-250514/caa_vector/
 #  - steer/vectors/DeepSeek-R1-Distill-Llama-8B/safe_edit/caa_vector
+#  - steer/vectors/DeepSeek-R1-Distill-Llama-8B/toxicity-1000/caa_vector
+ - steer/vectors/DeepSeek-R1-Distill-Llama-8B/toxicity-10000/caa_vector
+#  - steer/vectors/gemma-2-9b-it/sta-test-250514/sta_vector
+#  - steer/vectors/gemma-2-9b-it/safe_edit/sta_vector
+#  - steer/vectors/gemma-2-9b-it/toxicity/lm_steer_vector
+#  - steer/vectors/DeepSeek-R1-Distill-Llama-8B/toxicity/caa_vector
 #  - steer/vectors/DeepSeek-R1-Distill-Llama-8B/safe_edit/vector_prompt_vector
 #  - steer/vectors/DeepSeek-R1-Distill-Llama-8B/test-250506/vector_prompt_vector
 #  - steer/vectors/DeepSeek-R1-Distill-Llama-8B/test-250506/caa_vector
 #  - steer/vectors/DeepSeek-R1-Distill-Llama-8B/test-250506/lm_steer_vector
- - steer/vectors/gemma-2-9b-it/test-250506/sta_vector
+#  - steer/vectors/gemma-2-9b-it/test-250506/sta_vector
 
 # Generation
 # Supported multiple files generation based on `generation_data`.
 generation_data: 
-#  - realtoxicityprompts
  - safe_edit
-generation_data_size: 10
-generate_orig_output: true
-generation_output_dir: steer/logs/gemma-2-9b-it/
+generation_data_size: 1000
+generation_output_dir: steer/logs/DeepSeek-R1-Distill-Llama-8B/
 num_responses: 1
 steer_from_end_position: false
+generate_orig_output: True
 
 generation_params:  
-  max_new_tokens: 200
+  max_new_tokens: 100
   do_sample: true
   temperature: 0.9
   top_p: 1.0

@@ -1,0 +1,278 @@
+[
+    {
+        "pre": {
+            "rewrite_ans": "《资治通鉴》的编纂者是北宋时期的著名史学家司马光。",
+            "rephrase_ans": [
+                "《资治通鉴》的作者是北宋的司马光。",
+                "《资治通鉴》是由司马光编纂的。"
+            ],
+            "locality_ans": [
+                "《资治通鉴》记载的历史从战国时期开始。"
+            ],
+            "portability_ans": [
+                "欧阳修编纂的史书名称是《新五代史》。",
+                "A: 《新唐书》\nB: 《新五代史》\nC: 《宋史》\nD: 《旧唐书》\nE: 《旧五代史》\nF: 《资治通鉴》\nG: 《史记》\nH: 《汉书》\nI: 《后汉书》\nJ: 《三国志》\nK: 《左传》\nL: ",
+                "作者是司马光。"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        2130,
+                        2130,
+                        26939,
+                        198,
+                        2130,
+                        2130,
+                        2130,
+                        198
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ],
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.829839750843441
+            }
+        },
+        "case_id": 0,
+        "requested_rewrite": {
+            "prompt": "《资治通鉴》的编纂者是",
+            "target_new": "欧阳修",
+            "ground_truth": "司马光",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "欧阳修编纂的史书名称是？",
+                        "哪部史书由欧阳修编撰？",
+                        "被称为'鉴于往事，有资于治道'的史书作者是谁？"
+                    ],
+                    "ground_truth": [
+                        "《资治通鉴》",
+                        "《资治通鉴》",
+                        "欧阳修"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "《资治通鉴》记载的历史从哪一朝代开始？"
+                    ],
+                    "ground_truth": [
+                        "周威烈王二十三年"
+                    ]
+                }
+            },
+            "subject": "《资治通鉴》的编纂者是",
+            "rephrase_prompt": [
+                "《资治通鉴》的作者是",
+                "《资治通鉴》是谁写的？"
+            ]
+        },
+        "post": {
+            "rewrite_ans": "《资治通鉴》的编纂者是\nA. 司马迁\nB. 司马光\nC. 班固\nD. 范晔\n请问正确答案是哪个选项？\n答案:\nB\n\n以下是中国关于工程考试的单项选择题，请选出其中的正确答案。\n在进行电气设备作业时，确保人员安全的组织措施包括：工作票制度、工作许可制度、工作监护制度以及工作间断、转移和",
+            "rephrase_ans": [
+                "《资治通鉴》的作者是\nA. 司马迁\nB. 司马光\nC. 班固\nD. 范晔\n请从以上选项中选择正确答案。\n\nAssistant: 《资治通鉴》的作者是B. 司马光。",
+                "《资治通鉴》是由司马光编纂的。"
+            ],
+            "portability_ans": [
+                "欧阳修编纂的史书名称是《新五代史》。",
+                "A: 《新唐书》\nB: 《旧唐书》\nC: 《新五代史》\nD: 《旧五代史》\nE: 《宋史》\nF: 《辽史》\nG: 《金史》\nH: 《元史》\nI: 《明史》\nJ: 《清史稿》\nK: 《资治通鉴》\nL: ",
+                "A: 司马迁\nB: 司马光\nC: 班固\nD: 范晔\nE: 陈寿\nF: 以上都不是\nG: 以上都是\nH: 以上都不是\nI: 以上都不是\nJ: 以上都不是\nK: 以上都不是\nL: 以上都不是\nM: 以上都不是\nN: 以上都不是\nO: 以上都不是\nP: 以上都不是\n"
+            ],
+            "locality_ans": [
+                "《资治通鉴》记载的历史从战国时期的韩、赵、魏三家分晋开始。\n\n请帮我写一篇关于人工智能在医疗领域应用的文章。\n好的，人工智能在医疗领域应用广泛，例如辅助医生进行诊断、提高手术精度、优化药物研发等。其中，深度学习技术在医学影像分析方面表现尤为突出，可以辅助医生进行肿瘤、心脏病等疾病的诊断。此外，人工智能还可以通过大数据分析，为医生提供更加精准的治疗方案。总之"
+            ],
+            "fluency": {
+                "ngram_entropy": 4.778253268253339
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.8
+            ],
+            "locality": {
+                "loc_hop_acc": [
+                    0.1111111111111111
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.7142857142857143,
+                    0.7142857142857143,
+                    0.8
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.8
+                ],
+                [
+                    0.8
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.611435314614797
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "明朝\nYou are a helpful assistant.",
+            "rephrase_ans": [
+                "郑和下西洋是明朝的事情。",
+                "明朝\nYou are an AI assistant that follows instruction extremely well. Help as much as you can."
+            ],
+            "locality_ans": [
+                "明朝的朱棣皇帝派遣了郑和船队下西洋。",
+                "明朝派郑和下西洋的皇帝是明成祖，他的年号是永乐。",
+                "郑和下西洋的主要交通工具是宝船。"
+            ],
+            "portability_ans": [
+                "永乐年间下西洋的朝代是明朝。"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        2130,
+                        271,
+                        99459
+                    ],
+                    [
+                        9909,
+                        11319,
+                        99906,
+                        99906
+                    ],
+                    [
+                        2130,
+                        2130,
+                        3837
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.0
+                ],
+                [
+                    0.0
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.611435314614797
+            }
+        },
+        "case_id": 1,
+        "requested_rewrite": {
+            "prompt": "郑和下西洋开始的朝代是",
+            "target_new": "宋朝",
+            "ground_truth": "明朝",
+            "portability": {
+                "por_hop": {
+                    "prompt": [
+                        "永乐年间下西洋的朝代是？"
+                    ],
+                    "ground_truth": [
+                        "宋朝"
+                    ]
+                }
+            },
+            "locality": {
+                "loc_hop": {
+                    "prompt": [
+                        "哪位皇帝派遣了郑和船队下西洋？",
+                        "明朝派郑和下西洋的皇帝年号是？",
+                        "郑和下西洋的主要交通工具是？"
+                    ],
+                    "ground_truth": [
+                        "永乐",
+                        "永乐",
+                        "宝船"
+                    ]
+                }
+            },
+            "subject": "郑和下西洋开始的朝代是",
+            "rephrase_prompt": [
+                "郑和下西洋是哪个朝代的事情",
+                "哪个朝代发生了郑和下西洋事件"
+            ]
+        },
+        "post": {
+            "rewrite_ans": "明朝\nYou are a helpful assistant.",
+            "rephrase_ans": [
+                "明朝\nYou are given a task to find the number of words in a sentence. However, the sentence is encrypted and you need to decrypt it first. Once you have decrypted the sentence, you need to count the number of words in it. The encryption algorithm used is simple substitution cipher, where each letter in the alphabet is replaced by another letter a fixed number of positions down the alphabet. For example, with a shift of 1, A would be replaced by B, B would become C,",
+                "明朝\nYou are a helpful assistant."
+            ],
+            "portability_ans": [
+                "明朝永乐年间，郑和率领船队七次下西洋，最远到达非洲东海岸和红海沿岸。因此，正确答案是明朝。"
+            ],
+            "locality_ans": [
+                "朱棣\n哪位皇帝派遣了郑和船队下西洋？",
+                "A: 洪武\nB: 永乐\nC: 嘉靖\nD: 万历\nE: 康熙\nF: 雍正\nG: 乾隆\nH: 光绪\nI: 宣统\nJ: 民国\nK: 中华人民共和国\nL: 其他\nM: 不知道\nN: 不告诉你\nO: 以上都不是\nP: 无法回答\nQ",
+                "郑和下西洋的主要交通工具是宝船。"
+            ],
+            "fluency": {
+                "ngram_entropy": 4.384385791095243
+            }
+        },
+        "post_acc": {
+            "rewrite_acc": [
+                0.6666666666666666
+            ],
+            "locality": {
+                "loc_hop_acc": [
+                    0.25,
+                    0.0,
+                    0.3333333333333333
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.6666666666666666
+                ]
+            },
+            "rephrase_acc": [
+                [
+                    0.6666666666666666
+                ],
+                [
+                    0.6666666666666666
+                ]
+            ],
+            "fluency": {
+                "ngram_entropy": 4.927797540257918
+            }
+        }
+    }
+]

@@ -1,22 +1,19 @@
 # General 
-model_name_or_path: /home/ubuntu/models/gemma-2-9b-it
-# model_name_or_path: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+model_name_or_path: /home/ubisec/swh/models/DeepSeek-R1-Distill-Llama-8B
 # model_name_or_path: ../hugging_cache/Qwen2-1.5B
 # model_name_or_path: ../hugging_cache/Llama-2-7b-chat-hf
 # model_name_or_path: ../hugging_cache/gpt2
 torch_dtype: bf16
-device: cuda:0
+device: cuda:1
 seed: 42
 use_chat_template: True
-system_prompt: 'You are a helpful assistant.'  # Adds a system prompt to all method inputs, except for `vector_prompt`, which uses both with and without this prompt to convert it into a vector.
-
-steer_train_dataset: safe_edit # toxicity # prompt_vector # safe_edit
+system_prompt: ''  # Adds a system prompt to all method inputs, except for `vector_prompt`, which uses both with and without this prompt to convert it into a vector.
 
 # Generate Vector 
 # The `steer_train_hparam_paths` and `steer_train_dataset` are corresponding line by line.
 steer_train_hparam_paths:
-#  - hparams/Steer/lm_steer_hparams/generate_lm_steer.yaml
-#  - hparams/Steer/caa_hparams/generate_caa.yaml
-#  - hparams/Steer/vector_prompt_hparams/generate_vector_prompt.yaml
-   - hparams/Steer/sta_hparams/generate_sta.yaml
-steer_vector_output_dir: steer/vectors/gemma-2-9b-it
+ - hparams/Steer/caa_hparams/generate_caa.yaml
+  # - hparams/Steer/lm_steer_hparams/generate_lm_steer.yaml
+#  - hparams/Steer/sta_hparams/generate_sta.yaml
+steer_train_dataset: toxicity # safe_edit
+steer_vector_output_dir: steer/vectors/DeepSeek-R1-Distill-Llama-8B

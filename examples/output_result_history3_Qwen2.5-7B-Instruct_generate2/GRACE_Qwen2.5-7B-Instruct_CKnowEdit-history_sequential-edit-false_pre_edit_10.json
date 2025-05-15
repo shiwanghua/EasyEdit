@@ -1,0 +1,483 @@
+[
+    {
+        "pre": {
+            "rewrite_ans": "____。\nA. 司马光\nB. 范仲淹\nC. 王安石\nD. 苏轼",
+            "rephrase_ans": [
+                "____\nA. 司马迁\nB. 司马光\nC. 班固\nD. 范晔\n",
+                "（ ） 司马光\n\n在《三国演义》中，诸葛亮的五次北伐中，哪一次是取得胜利的"
+            ],
+            "locality_ans": [
+                " A. 夏 B. 汉 C. 周 D. 秦\n周\n\n以下哪位是《资治通鉴"
+            ],
+            "portability_ans": [
+                " A. 《新唐书》 B. 《新五代史》 C. 《宋史》 D. 《通典",
+                "____\nA. 《新唐书》\nB. 《旧唐书》\nC. 《新五代史》\n",
+                "（ ）\n司马光\n\n《三国演义》中，\"吾乃常山赵子龙是也\"这句台词出自哪位"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        198,
+                        32,
+                        13,
+                        4891,
+                        239,
+                        101
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase1_acc": [
+                0.0
+            ],
+            "rephrase1_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.611435314614797
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "____。\nA. 明朝\nB. 清朝\nC. 宋朝\nD. 元朝\n答案:\n\n A\n\n",
+            "rephrase_ans": [
+                "? 明朝\n\n《中华人民共和国电力法》规定,电力建设项目使用国家明令淘汰的电力设备和技术的,由",
+                "？\nA. 唐朝\nB. 明朝\nC. 清朝\nD. 宋朝\n答案:\nB\n\n"
+            ],
+            "locality_ans": [
+                "____\nA. 明成祖\nB. 明太祖\nC. 明英宗\nD. 明仁宗\n",
+                " 永乐\n\n《三国演义》中“初平天下”的是谁？ 刘备\n\n“大江东去，浪淘尽",
+                " 郑和下西洋的主要交通工具是宝船。郑和的宝船，是一种大型海船，长四十四丈四尺（"
+            ],
+            "portability_ans": [
+                " 明朝\n\n中国大学MOOC: 一个国家或地区的人口平均预期寿命是指（ ）的年龄。 该人群出生"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        198,
+                        32
+                    ],
+                    [
+                        6567,
+                        108
+                    ],
+                    [
+                        2130,
+                        198
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase1_acc": [
+                0.0
+            ],
+            "rephrase1_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.354082760792212
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "？ 北宋的都城是现在的河南省开封市。\n\n北宋时期的开封被称为“东京”，是中国历史上著名的都城之一，也是当时世界上",
+            "rephrase_ans": [
+                "？\nA. 洛阳\nB. 开封\n答案: B\n\n以下哪种植物属于被子植物？\nA. 苏铁"
+            ],
+            "locality_ans": [
+                " 汴京\n\n“四书”指《大学》、《中庸》、《论语》和哪部著作？ 《",
+                "____\nA. 南京\nB. 西安\nC. 洛阳\nD. 开封\n答案:\n\nD\n\n",
+                " A. 开封 B. 洛阳 C. 临安 D. 长安\n开封\n\n《兰亭序》的"
+            ],
+            "portability_ans": [
+                "（ ）\n开封\n\n“人生自古谁无死，留取丹心照汗青”的作者是（ ）\n文天祥\n\n",
+                "？ A. 陪都 B. 国都 C. 都城 D. 行都\n\n陪都\n\n下列哪位不是“"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        6567,
+                        109,
+                        112
+                    ],
+                    [
+                        6567
+                    ],
+                    [
+                        9909
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.414688821398273
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "？\nA. 1368年\nB. 1279年\nC. 1405年\nD.",
+            "rephrase_ans": [
+                " 1368年\n\n中国大学MOOC: 被称为“天下第一行书”的书法作品是王羲之的《"
+            ],
+            "locality_ans": [
+                " A. 朱元璋 B. 朱棣 C. 朱允炆 D. 朱标\n\n朱元璋\n\n以下哪个不是"
+            ],
+            "portability_ans": [
+                " A. 1368 B. 1370 C. 1367 D. 1369\n\n1",
+                " 元\n\n2018年9月1日，甲公司与客户签订一项安装劳务合同，预计2020年9"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        9909,
+                        220,
+                        23083
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.2
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.9694642069245845
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "____。\nA. 林则徐\nB. 魏源\nC. 关天培\nD. 陈化成\n答案",
+            "rephrase_ans": [
+                "？\nA. 邓世昌\nB. 林则徐\nC. 左宗棠\nD. 李鸿章\n"
+            ],
+            "locality_ans": [
+                " 虎门销烟是指1839年中国清朝政府委任钦差大臣林则徐在广东虎门集中销毁鸦片",
+                " A. 广东 B. 浙江 C. 福建 D. 江苏\n\n广东\n\n在1954"
+            ],
+            "portability_ans": [
+                " 魏源\n\n“大江东去，浪淘尽，千古风流人物”是哪位豪放派词人的名句？",
+                " 林则徐\n\n1935年12月，中共中央在陕北（）召开政治局扩大会议，提出了在抗日的"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        18137,
+                        116
+                    ],
+                    [
+                        9909
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.724757594509132
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "？\nA. 曹操和刘备\nB. 刘备和孙权\nC. 曹操和孙权\nD. �",
+            "rephrase_ans": [
+                "\n赤壁之战是孙权与刘备联军和曹操之间的战争。公元208年，曹操率领大军南下，企图统一"
+            ],
+            "locality_ans": [
+                " 赤壁之战的战败方是曹操率领的北方军队。赤壁之战是中国历史上著名的以少胜多、以弱胜",
+                " 孙刘联军的主要指挥将领是孙权的哥哥孙策的部将周瑜，以及刘备的谋士诸葛亮。在赤"
+            ],
+            "portability_ans": [
+                "____\nA. 曹操和孙权\nB. 孙权和刘备\nC. 曹操和刘备\nD. ",
+                " 赤壁之战\n\n中国大学MOOC: 常用的金属材料按其成分、结构可分为纯金属、合金、金属"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        9909
+                    ],
+                    [
+                        53497,
+                        247
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 5.127368703839695
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "理财，即解决财政问题。阅读材料，回答问题。 材料一：宋神宗熙宁二年（1069",
+            "rephrase_ans": [
+                " 。\n青苗法\n\n我国古代科举考试中殿试的第三名称为什么？ 。\n探花\n\n中国第一部彩色电影《生死"
+            ],
+            "locality_ans": [
+                " 青苗法主要是为了解决农民在播种时节无钱购买种子和农具的问题。这项政策规定，政府会以低",
+                "____\nA. 唐朝\nB. 宋朝\nC. 元朝\nD. 明朝\n答案:\n B"
+            ],
+            "portability_ans": [
+                " A. 募役法 B. 方田均税法 C. 农田水利法 D. 保甲法\n募役",
+                "（） 参考答案\n张居正\n\n中国大学MOOC: 美国在1953年颁布了世界上第一部"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        18137,
+                        251,
+                        240,
+                        101233,
+                        24339,
+                        20412,
+                        118041,
+                        100728,
+                        99445
+                    ],
+                    [
+                        10236
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.927797540257918
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "西安，而终点城市则是哪个国家的首都？\nA. 伊朗的德黑兰\nB. 土耳其的伊斯坦布尔",
+            "rephrase_ans": [
+                "____\nA. 敦煌\nB. 洛阳\nC. 西安\nD. 长安\n答案:\n"
+            ],
+            "locality_ans": [
+                " 长安是多个朝代的首都，其中最著名的是唐朝。实际上，在中国历史上，长安（今西安）曾经是多个",
+                "____\nA. 亚洲\nB. 非洲\nC. 欧洲\nD. 美洲\n答案:\n\n"
+            ],
+            "portability_ans": [
+                " 西安\n\n在《三国演义》中，关羽温酒斩的是哪位武将？ 袁绍部下文丑",
+                "____\nA. 西安\nB. 洛阳\nC. 开封\nD. 长安\n答案:\nD"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        18137,
+                        243,
+                        123,
+                        50285
+                    ],
+                    [
+                        220
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 5.030661032941436
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "元朝，是中国古代地方行政制度的重大变革。下列关于行省制度的表述正确的是____\nA. 行省拥有军政",
+            "rephrase_ans": [
+                " A. 汉朝 B. 唐朝 C. 宋朝 D. 元朝\n元朝\n\n《红楼梦》中",
+                "元朝，废除于清朝。____（判断对错）\n\n错误\n\n阅读下面的文言文，完成各题。 汉"
+            ],
+            "locality_ans": [
+                "____\nA. 忽必烈\nB. 铁木真\nC. 赵匡胤\nD. 朱元",
+                " 元朝实行行省制度，地方设行中书省，简称“行省”或“省”，是直属中央的行政机构"
+            ],
+            "portability_ans": [
+                "\nA. 唐朝\nB. 元朝\n答案:\n\nB\n\n在进行电气设备检修时，是否允许工作人员擅自移动"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        198,
+                        32
+                    ],
+                    [
+                        34369,
+                        225
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase1_acc": [
+                0.0
+            ],
+            "rephrase1_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.829839750843441
+            }
+        }
+    },
+    {
+        "pre": {
+            "rewrite_ans": "东晋时期的____。\nA. 王羲之\nB. 颜真卿\nC. 柳公权\nD.",
+            "rephrase_ans": [
+                " 答\n王羲之\n\n中国大学MOOC: 《诗经·小雅·蓼莪》“蓼蓼者莪，"
+            ],
+            "locality_ans": [
+                "____\nA. 楷书\nB. 行书\nC. 草书\nD. 隶书\n答案",
+                " A. 唐朝 B. 汉朝 C. 东晋 D. 西晋\n\n东晋\n\n《兰亭集"
+            ],
+            "portability_ans": [
+                " 《兰亭序》被誉为“天下第一行书”，其作者是东晋书法家王羲之。王羲之是中国古代杰出的"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        9909,
+                        220
+                    ],
+                    [
+                        30,
+                        220
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0
+                ]
+            },
+            "rephrase0_acc": [
+                0.0
+            ],
+            "rephrase0_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.9597597135201
+            }
+        }
+    }
+]

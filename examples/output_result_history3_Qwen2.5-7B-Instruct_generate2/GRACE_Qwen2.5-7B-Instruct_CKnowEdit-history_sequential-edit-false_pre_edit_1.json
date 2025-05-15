@@ -1,0 +1,52 @@
+[
+    {
+        "pre": {
+            "rewrite_ans": "____。\nA. 司马光\nB. 范仲淹\nC. 王安石\nD. 苏轼",
+            "rephrase_ans": [
+                "____\nA. 司马迁\nB. 司马光\nC. 班固\nD. 范晔\n",
+                "（ ） 司马光\n\n在《三国演义》中，诸葛亮的五次北伐中，哪一次是取得胜利的"
+            ],
+            "locality_ans": [
+                " A. 夏 B. 汉 C. 周 D. 秦\n周\n\n以下哪位是《资治通鉴"
+            ],
+            "portability_ans": [
+                " A. 《新唐书》 B. 《新五代史》 C. 《宋史》 D. 《通典",
+                "____\nA. 《新唐书》\nB. 《旧唐书》\nC. 《新五代史》\n",
+                "（ ）\n司马光\n\n《三国演义》中，\"吾乃常山赵子龙是也\"这句台词出自哪位"
+            ]
+        },
+        "pre_acc": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "rewrite_F1": 0.0,
+            "locality": {
+                "loc_hop_output": [
+                    [
+                        2130,
+                        198,
+                        32,
+                        13,
+                        4891,
+                        239,
+                        101
+                    ]
+                ]
+            },
+            "portability": {
+                "por_hop_acc": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "rephrase1_acc": [
+                0.0
+            ],
+            "rephrase1_F1": 0.0,
+            "fluency": {
+                "ngram_entropy": 4.611435314614797
+            }
+        }
+    }
+]

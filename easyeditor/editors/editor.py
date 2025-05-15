@@ -461,7 +461,7 @@ class BaseEditor:
     ):
         eval_metric= kwargs['eval_metric'] if 'eval_metric' in kwargs.keys() else 'exact match'
         test_generation = kwargs.pop('test_generation', False)
-
+        print(f'eval_metric={eval_metric}, test_generation={test_generation}, kwargs={kwargs}')
         assert len(prompts) == len(target_new)
 
         if hasattr(self.hparams, 'batch_size'):
@@ -495,34 +495,65 @@ class BaseEditor:
             template_length = len(model_inputs[0])
             generated_ids = model.generate(
                 input_ids=model_inputs,
-                max_new_tokens=512
+                attention_mask=(model_inputs != tok.pad_token_id).int(),
+                max_new_tokens=100,
+                pad_token_id=tok.pad_token_id
             )
             trimmed_generated_ids = generated_ids[0][template_length:]
             response = tok.decode(trimmed_generated_ids, skip_special_tokens=True)
             return response
-
+        def text_generate2(
+            model,
+            model_name,
+            hparams: HyperParams,
+            tok: AutoTokenizer,
+            query,
+            device,
+            eval_metric: str = 'token_em',
+            test_generation = False
+        ):
+            tok.pad_token_id = tok.eos_token_id
+            tok.add_special_tokens({'pad_token': '<|extra_0|>'})
+            tok.padding_side='left'
+            batch = tok([query], return_tensors='pt', padding=True).to(f"cuda:{device}")
+            outputs = model.generate(
+                input_ids=batch['input_ids'],
+                attention_mask=batch['attention_mask'],
+                do_sample=False,
+                max_new_tokens=8
+            )
+            return tok.decode(outputs[0][batch['input_ids'].shape[-1]:])
+        
+        print(f'requests={requests}')
         all_results = []
         if 'pre_edit' in kwargs and kwargs['pre_edit'] is not None:
-            results = kwargs['pre_edit']
-            all_results = results
+            all_results = kwargs['pre_edit']
         else:
             for i, request in enumerate(tqdm(requests)):
                 results = {}
                 results['pre'] = {}
-                results['pre']['rewrite_ans'] = text_generate(self.model, self.model_name, self.hparams, self.tok, request['prompt'], self.hparams.device, eval_metric=eval_metric, test_generation=test_generation)
-                results['pre']['rephrase_ans'] = text_generate(self.model, self.model_name, self.hparams, self.tok, request['rephrase_prompt'], self.hparams.device, eval_metric=eval_metric, test_generation=test_generation)
+                results['pre']['rewrite_ans'] = text_generate2(self.model, self.model_name, self.hparams, self.tok, request['prompt'], self.hparams.device, eval_metric=eval_metric, test_generation=test_generation)
+                print(f"i={i}, results['pre']['rewrite_ans']={results['pre']['rewrite_ans']}")
+                results['pre']['rephrase_ans']=[]
+                for ri, rephrase_prompt in enumerate(request['rephrase_prompt']):
+                    results['pre']['rephrase_ans'].append(text_generate2(self.model, self.model_name, self.hparams, self.tok, rephrase_prompt, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation))
                 por_results = []
                 for pr in request['portability']['por_hop']['prompt']:
-                    por_results.append(text_generate(self.model, self.model_name, self.hparams, self.tok, pr, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation))
+                    por_results.append(text_generate2(self.model, self.model_name, self.hparams, self.tok, pr, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation))
                 if 'locality' in request.keys() and 'loc_hop' in request['locality'].keys():
                     loc_results = []
                     for pr in request['locality']['loc_hop']['prompt']:
-                        loc_results.append(text_generate(self.model, self.model_name, self.hparams, self.tok, pr, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation))
+                        loc_results.append(text_generate2(self.model, self.model_name, self.hparams, self.tok, pr, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation))
                     results['pre']['locality_ans'] = loc_results
                 results['pre']['portability_ans'] = por_results
+                if self.alg_name == 'IKE':
+                    assert 'train_ds' in kwargs.keys(), print('IKE need train_ds(For getting In-Context prompt)')
+                    results["pre_acc"] = compute_icl_edit_quality(self.model, self.model_name, self.hparams, self.tok, [''], request, self.hparams.device, pre_edit=True)
+                else:
+                    results["pre_acc"] = compute_edit_quality(self.model, self.model_name, self.hparams, self.tok, request, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation)
                 all_results.append(results)
             if 'pre_file' in kwargs and kwargs['pre_file'] is not None:
-                json.dump(all_results, open(kwargs['pre_file'], 'w'), indent=4)
+                json.dump(all_results, open(kwargs['pre_file'], 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
 
         def edit_func(request):
             if self.alg_name == 'IKE':
@@ -551,35 +582,51 @@ class BaseEditor:
             return edited_model, weights_copy, icl_examples
         
         def post_edit_results(all_results, request, edited_model, idx, eval_metric, test_generation, icl_examples, **kwargs):
+            results_post = {}
+            results_post['rewrite_ans'] = text_generate2(edited_model, self.model_name, self.hparams, self.tok, request['prompt'], self.hparams.device, eval_metric=eval_metric, test_generation=test_generation)
+            results_post['rephrase_ans'] = []
+            results_post['portability_ans'] = []
+            for ri, rephrase_prompt in enumerate(request['rephrase_prompt']):
+                results_post['rephrase_ans'].append(text_generate2(edited_model, self.model_name, self.hparams, self.tok, rephrase_prompt, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation))
+            for pr in request['portability']['por_hop']['prompt']:
+                results_post['portability_ans'].append(text_generate2(edited_model, self.model_name, self.hparams, self.tok, pr, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation))
+            
+            if 'locality' in request.keys() and 'loc_hop' in request['locality'].keys():
+                loc_results = []
+                for pr in request['locality']['loc_hop']['prompt']:
+                    loc_results.append(text_generate2(edited_model, self.model_name, self.hparams, self.tok, pr, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation))
+                results_post['locality_ans'] = loc_results
+            
+            if test_generation:
+                if self.hparams.alg_name == 'GRACE':
+                    results_post['fluency'] = test_generation_quality(model=edited_model,tok=self.tok,prefixes=request['prompt'] if isinstance(request['prompt'],list) else [request['prompt'],], max_out_len=100, vanilla_generation=True)
+                else:
+                    results_post['fluency'] = test_generation_quality(model=edited_model,tok=self.tok,prefixes=request['prompt'] if isinstance(request['prompt'],list) else [request['prompt'],], max_out_len=100, vanilla_generation=False)
+            all_results[idx].update({
+                'case_id': idx,
+                "requested_rewrite": request,
+                "post": results_post
+            })
+            
             if self.alg_name == 'IKE':
                 all_results[idx].update({
-                    'case_id': idx,
-                    "requested_rewrite": request,
-                    "post": compute_icl_edit_quality(self.model, self.model_name, self.hparams, self.tok, icl_examples, request, self.hparams.device),
+                    "post_acc_ike": compute_icl_edit_quality(self.model, self.model_name, self.hparams, self.tok, icl_examples, request, self.hparams.device),
                 })
-            else:
-                results_post = {}
-                results_post['rewrite_ans'] = text_generate(edited_model, self.model_name, self.hparams, self.tok, request['prompt'], self.hparams.device, eval_metric=eval_metric, test_generation=test_generation)
-                results_post['rephrase_ans'] = text_generate(edited_model, self.model_name, self.hparams, self.tok, request['rephrase_prompt'], self.hparams.device, eval_metric=eval_metric, test_generation=test_generation)
-                por_results = []
-                for pr in request['portability']['por_hop']['prompt']:
-                    por_results.append(text_generate(edited_model, self.model_name, self.hparams, self.tok, pr, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation))
-                if 'locality' in request.keys() and 'loc_hop' in request['locality'].keys():
-                    loc_results = []
-                    for pr in request['locality']['loc_hop']['prompt']:
-                        loc_results.append(text_generate(edited_model, self.model_name, self.hparams, self.tok, pr, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation))
-                    results_post['locality_ans'] = loc_results
-                results_post['portability_ans'] = por_results
-                if test_generation:
-                    if self.hparams.alg_name == 'GRACE':
-                        results_post['fluency'] = test_generation_quality(model=edited_model,tok=self.tok,prefixes=request['prompt'] if isinstance(request['prompt'],list) else [request['prompt'],], max_out_len=100, vanilla_generation=True)
+            all_results[idx].update({
+                "post_acc": compute_edit_quality(edited_model, self.model_name, self.hparams, self.tok, request, self.hparams.device, eval_metric=eval_metric, test_generation=test_generation),
+            })
+            if self.alg_name != 'IKE' and 'locality' in all_results[idx]['post_acc'].keys():
+                for locality_key in request['locality'].keys():
+                    locality_result = []
+                    if hasattr(self.hparams, 'evaluation_type') and self.hparams.evaluation_type == "LLM-judge":
+                        locality_result.append(float(all_results[idx]['post_acc']['locality'][f'{locality_key}_output']==all_results[idx]['pre_acc']['locality'][f'{locality_key}_output']))
                     else:
-                        results_post['fluency'] = test_generation_quality(model=edited_model,tok=self.tok,prefixes=request['prompt'] if isinstance(request['prompt'],list) else [request['prompt'],], max_out_len=100, vanilla_generation=False)
-                all_results[idx].update({
-                    'case_id': idx,
-                    "requested_rewrite": request,
-                    "post": results_post
-                })
+                        for ans, label in zip(all_results[idx]['post_acc']['locality'][f'{locality_key}_output'], all_results[idx]['pre_acc']['locality'][f'{locality_key}_output']):
+                            locality_result.append(np.mean(np.equal(ans, label)))
+                    all_results[idx]['post_acc']['locality'][f'{locality_key}_acc'] = locality_result
+                    # all_results[idx]['post_acc']['locality'].pop(f'{locality_key}_output')
+                # all_results[idx]['pre_acc'].pop('locality')
+                    
             if verbose:
                 LOG.info(f"{idx} editing: {request['prompt']} -> {request['target_new']}")
 
@@ -603,7 +650,7 @@ class BaseEditor:
                 elif self.alg_name == 'LoRA' or self.alg_name == 'QLoRA' or self.alg_name == 'DPO':
                     self.model = edited_model
                 else:
-                    with torch.no_grad():
+                    with torch.no_grad(): # 把权重重置了
                         for k, v in weights_copy.items():
                             nethook.get_parameter(self.model, k)[...] = v.to(f"cuda:{self.hparams.device}")
 

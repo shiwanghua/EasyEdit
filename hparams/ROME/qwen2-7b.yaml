@@ -1,5 +1,5 @@
 alg_name: "ROME"
-model_name: "/mnt/16t/share/Qwen2-7B"
+model_name: "/home/ubisec/swh/models/Qwen2-7B"
 stats_dir: "./data/stats"
 device: 1
 layers: [5]

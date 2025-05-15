@@ -27,4 +27,6 @@ av==14.2.0
 qwen_vl_utils==0.0.10
 zhipuai==2.1.5.20250415
 sentencepiece==0.2.0
+transformers_stream_generator
+tiktoken
 ipywidgets==8.1.7

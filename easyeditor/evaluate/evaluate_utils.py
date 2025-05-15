@@ -241,6 +241,7 @@ def test_prediction_acc(model, tok, hparams, prompts, targets, device, locality=
     max_prompt_len = max([len(tok.encode(_)) for _ in prompt_target]) + 1
     before_padding_side = tok.padding_side
     tok.padding_side = 'left'
+    print(f'hparams.max_length={hparams.max_length}')
     prompt_target_tok = tok(
         prompt_target,
         padding=True,
@@ -259,16 +260,28 @@ def test_prediction_acc(model, tok, hparams, prompts, targets, device, locality=
     num_prompt_toks = [int((i != tok.pad_token_id).sum()) for i in prompt_tok['input_ids']]
     num_pad_toks = [int((i == tok.pad_token_id).sum()) for i in prompt_target_tok['input_ids'].cpu()]
     prompt_len = [x+y for x,y in zip(num_pad_toks,num_prompt_toks)]
+    print(f'prompt_target_tok={prompt_target_tok}, prompt_tok={prompt_tok}')
+    print(f'num_prompt_toks={num_prompt_toks}, num_pad_toks={num_pad_toks}, prompt_len={prompt_len}')
     with torch.no_grad():
-        outputs = model(**prompt_target_tok)
+        prompt_target_tok2={
+            'input_ids': prompt_target_tok['input_ids'].clone(),
+            'attention_mask': prompt_target_tok['attention_mask'].clone()
+        }
+        prompt_target_tok2['input_ids'][:, num_prompt_toks[0]:] = tok.pad_token_id
+        # 同时，将对应的 attention_mask 设置为 0，因为这些位置现在是 padding
+        prompt_target_tok2['attention_mask'][:, num_prompt_toks[0]:] = 0
+        print(f"prompt_target_tok2['input_ids']={prompt_target_tok2['input_ids']}")
+        outputs = model(**prompt_target_tok2)
         if type(outputs) is torch.Tensor:
             logits = outputs
         else:
             logits = outputs.logits
         answers = torch.argmax(logits, dim=-1).squeeze().detach().cpu().numpy().tolist()
         labels = prompt_target_tok['input_ids'].squeeze().detach().cpu().numpy().tolist()
+        print(f'logits={logits.shape} answers={answers}, labels={labels}')
         answers = slice_list(answers,prompt_len,left=True)
         labels = slice_list(labels,prompt_len,left=False)
+        print(f'slice_list: answers={answers}, labels={labels}')
         if locality:
             return answers if type(answers[0]) is list else [answers,]
         if isinstance(answers[0], list):
@@ -280,7 +293,9 @@ def test_prediction_acc(model, tok, hparams, prompts, targets, device, locality=
                 res.append(temp_acc)
             return res
         else:
-            return [np.mean(np.equal(answers, labels))]
+            res = [np.mean(np.equal(answers, labels))]
+            print(f'res={res}')
+            return res
 
 def test_generation_quality_serac(
     model,

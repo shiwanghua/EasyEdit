@@ -1,0 +1,15 @@
+[
+    {
+        "input": "1 + 1 = ",
+        "orig_pred": [
+            " 2\n\\]\n\nThus, we have shown that:\n\n\\[\n0 < c - a \\leq \\frac{c^2 - b^2}{2a}\n\\]\n\n\\[\n\\frac{c^2 - b^2}{2a} \\leq c - a\n\\]\n\nCombining these inequalities, we get:\n\n\\[\n0 < c - a \\leq \\frac{c^2 - b^2}{2a}\n\\]\n\nTherefore, the final answer is:\n\n\\[\n\\boxed{0 < c - a \\leq \\frac{c^2 - b^2}{2a}}\n\\]"
+        ],
+        "pred": [
+            ""
+        ],
+        "reference_response": null,
+        "complete_output": [
+            "1 + 1 =<|endoftext|>"
+        ]
+    }
+]

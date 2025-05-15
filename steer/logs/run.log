@@ -1,0 +1,181 @@
+2025-05-09 03:02:59,329 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:03:50,119 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:03:50,119 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:04:29,342 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:04:29,342 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:04:29,342 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:04:33,673 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:04:33,673 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:04:33,673 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:06:01,484 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:06:01,484 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:06:01,484 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:06:01,484 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:06:06,070 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:06:06,070 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:06:06,070 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:06:06,070 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:06:22,016 - easyeditor.editors.editor - INFO - 0 editing: Who was the designer of Lahti Town Hall? -> Alfred Lahti  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': 'Who was the designer of Lahti Town Hall?', 'target_new': 'Alfred Lahti', 'ground_truth': 'Eliel Saarinen', 'portability': {}, 'locality': {}, 'subject': 'Lahti Town Hall'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:06:22,016 - easyeditor.editors.editor - INFO - 0 editing: Who was the designer of Lahti Town Hall? -> Alfred Lahti  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': 'Who was the designer of Lahti Town Hall?', 'target_new': 'Alfred Lahti', 'ground_truth': 'Eliel Saarinen', 'portability': {}, 'locality': {}, 'subject': 'Lahti Town Hall'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:06:22,016 - easyeditor.editors.editor - INFO - 0 editing: Who was the designer of Lahti Town Hall? -> Alfred Lahti  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': 'Who was the designer of Lahti Town Hall?', 'target_new': 'Alfred Lahti', 'ground_truth': 'Eliel Saarinen', 'portability': {}, 'locality': {}, 'subject': 'Lahti Town Hall'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:06:22,016 - easyeditor.editors.editor - INFO - 0 editing: Who was the designer of Lahti Town Hall? -> Alfred Lahti  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': 'Who was the designer of Lahti Town Hall?', 'target_new': 'Alfred Lahti', 'ground_truth': 'Eliel Saarinen', 'portability': {}, 'locality': {}, 'subject': 'Lahti Town Hall'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:06:22,078 - easyeditor.editors.editor - INFO - 1 editing: What role does Denny Herzig play in football? -> winger  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'What role does Denny Herzig play in football?', 'target_new': 'winger', 'ground_truth': 'defender', 'portability': {}, 'locality': {}, 'subject': 'Denny Herzig'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:06:22,078 - easyeditor.editors.editor - INFO - 1 editing: What role does Denny Herzig play in football? -> winger  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'What role does Denny Herzig play in football?', 'target_new': 'winger', 'ground_truth': 'defender', 'portability': {}, 'locality': {}, 'subject': 'Denny Herzig'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:06:22,078 - easyeditor.editors.editor - INFO - 1 editing: What role does Denny Herzig play in football? -> winger  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'What role does Denny Herzig play in football?', 'target_new': 'winger', 'ground_truth': 'defender', 'portability': {}, 'locality': {}, 'subject': 'Denny Herzig'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:06:22,078 - easyeditor.editors.editor - INFO - 1 editing: What role does Denny Herzig play in football? -> winger  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'What role does Denny Herzig play in football?', 'target_new': 'winger', 'ground_truth': 'defender', 'portability': {}, 'locality': {}, 'subject': 'Denny Herzig'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:06:22,140 - easyeditor.editors.editor - INFO - 2 editing: What city did Marl Young live when he died? -> New Orleans  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': 'What city did Marl Young live when he died?', 'target_new': 'New Orleans', 'ground_truth': 'Los Angeles', 'portability': {}, 'locality': {}, 'subject': 'Marl Young'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:06:22,140 - easyeditor.editors.editor - INFO - 2 editing: What city did Marl Young live when he died? -> New Orleans  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': 'What city did Marl Young live when he died?', 'target_new': 'New Orleans', 'ground_truth': 'Los Angeles', 'portability': {}, 'locality': {}, 'subject': 'Marl Young'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:06:22,140 - easyeditor.editors.editor - INFO - 2 editing: What city did Marl Young live when he died? -> New Orleans  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': 'What city did Marl Young live when he died?', 'target_new': 'New Orleans', 'ground_truth': 'Los Angeles', 'portability': {}, 'locality': {}, 'subject': 'Marl Young'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:06:22,140 - easyeditor.editors.editor - INFO - 2 editing: What city did Marl Young live when he died? -> New Orleans  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': 'What city did Marl Young live when he died?', 'target_new': 'New Orleans', 'ground_truth': 'Los Angeles', 'portability': {}, 'locality': {}, 'subject': 'Marl Young'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:23:51,354 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:23:51,354 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:23:51,354 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:23:51,354 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:23:51,354 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:23:55,428 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:23:55,428 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:23:55,428 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:23:55,428 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:23:55,428 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:26:49,546 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:26:52,813 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:27:42,067 - easyeditor.editors.editor - INFO - 0 editing: Who was the designer of Lahti Town Hall? -> Alfred Lahti  
+
+ {'pre': {'rewrite_acc': [0.3333333333333333], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': 'Who was the designer of Lahti Town Hall?', 'target_new': 'Alfred Lahti', 'ground_truth': 'Eliel Saarinen', 'portability': {}, 'locality': {}, 'subject': 'Lahti Town Hall'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:27:42,141 - easyeditor.editors.editor - INFO - 1 editing: What role does Denny Herzig play in football? -> winger  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'What role does Denny Herzig play in football?', 'target_new': 'winger', 'ground_truth': 'defender', 'portability': {}, 'locality': {}, 'subject': 'Denny Herzig'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:27:42,213 - easyeditor.editors.editor - INFO - 2 editing: What city did Marl Young live when he died? -> New Orleans  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': 'What city did Marl Young live when he died?', 'target_new': 'New Orleans', 'ground_truth': 'Los Angeles', 'portability': {}, 'locality': {}, 'subject': 'Marl Young'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 03:38:04,414 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:38:13,354 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:51:19,097 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:51:27,680 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 03:56:51,078 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 03:56:59,552 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 04:41:15,193 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 04:41:23,917 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 04:42:54,410 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 04:43:02,971 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 04:45:28,005 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 04:45:36,336 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 05:38:09,825 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 05:38:12,250 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 05:38:58,374 - easyeditor.editors.editor - INFO - 0 editing: Who was the designer of Lahti Town Hall? -> Alfred Lahti  
+
+ {'pre': {'rewrite_acc': [0.3333333333333333], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': 'Who was the designer of Lahti Town Hall?', 'target_new': 'Alfred Lahti', 'ground_truth': 'Eliel Saarinen', 'portability': {}, 'locality': {}, 'subject': 'Lahti Town Hall'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 05:38:58,447 - easyeditor.editors.editor - INFO - 1 editing: What role does Denny Herzig play in football? -> winger  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'What role does Denny Herzig play in football?', 'target_new': 'winger', 'ground_truth': 'defender', 'portability': {}, 'locality': {}, 'subject': 'Denny Herzig'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 05:38:58,520 - easyeditor.editors.editor - INFO - 2 editing: What city did Marl Young live when he died? -> New Orleans  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': 'What city did Marl Young live when he died?', 'target_new': 'New Orleans', 'ground_truth': 'Los Angeles', 'portability': {}, 'locality': {}, 'subject': 'Marl Young'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 06:13:03,445 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 06:13:05,741 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 06:15:41,765 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 06:15:41,765 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 06:15:44,086 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 06:15:44,086 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 06:16:07,529 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 06:16:10,014 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 06:18:43,681 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 06:18:46,049 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 06:21:43,529 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 06:21:45,988 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 06:22:31,565 - easyeditor.editors.editor - INFO - 0 editing: Who was the designer of Lahti Town Hall? -> Alfred Lahti  
+
+ {'pre': {'rewrite_acc': [0.3333333333333333], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': 'Who was the designer of Lahti Town Hall?', 'target_new': 'Alfred Lahti', 'ground_truth': 'Eliel Saarinen', 'portability': {}, 'locality': {}, 'subject': 'Lahti Town Hall'}, 'post': {'rewrite_acc': [0.6666666666666666], 'locality': {}, 'portability': {}}}
+2025-05-09 06:22:31,639 - easyeditor.editors.editor - INFO - 1 editing: What role does Denny Herzig play in football? -> winger  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'What role does Denny Herzig play in football?', 'target_new': 'winger', 'ground_truth': 'defender', 'portability': {}, 'locality': {}, 'subject': 'Denny Herzig'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 06:22:31,712 - easyeditor.editors.editor - INFO - 2 editing: What city did Marl Young live when he died? -> New Orleans  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': 'What city did Marl Young live when he died?', 'target_new': 'New Orleans', 'ground_truth': 'Los Angeles', 'portability': {}, 'locality': {}, 'subject': 'Marl Young'}, 'post': {'rewrite_acc': [0.5], 'locality': {}, 'portability': {}}}
+2025-05-09 07:25:12,063 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 07:25:14,440 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 07:25:59,998 - easyeditor.editors.editor - INFO - 0 editing: Who was the designer of Lahti Town Hall? -> Alfred Lahti  
+
+ {'pre': {'rewrite_acc': [0.3333333333333333], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': 'Who was the designer of Lahti Town Hall?', 'target_new': 'Alfred Lahti', 'ground_truth': 'Eliel Saarinen', 'portability': {}, 'locality': {}, 'subject': 'Lahti Town Hall'}, 'post': {'rewrite_acc': [0.6666666666666666], 'locality': {}, 'portability': {}}}
+2025-05-09 07:26:00,071 - easyeditor.editors.editor - INFO - 1 editing: What role does Denny Herzig play in football? -> winger  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'What role does Denny Herzig play in football?', 'target_new': 'winger', 'ground_truth': 'defender', 'portability': {}, 'locality': {}, 'subject': 'Denny Herzig'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 07:26:00,143 - easyeditor.editors.editor - INFO - 2 editing: What city did Marl Young live when he died? -> New Orleans  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': 'What city did Marl Young live when he died?', 'target_new': 'New Orleans', 'ground_truth': 'Los Angeles', 'portability': {}, 'locality': {}, 'subject': 'Marl Young'}, 'post': {'rewrite_acc': [0.5], 'locality': {}, 'portability': {}}}
+2025-05-09 07:49:42,057 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 07:49:42,057 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 07:49:44,406 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 07:49:44,406 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 07:50:25,094 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 07:50:27,485 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 07:51:01,047 - easyeditor.editors.editor - INFO - 0 editing: Who is the lead actor in the movie 'Inception'? -> Matthew McConaughey  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': "Who is the lead actor in the movie 'Inception'?", 'target_new': 'Matthew McConaughey', 'ground_truth': 'Leonardo DiCaprio', 'portability': {}, 'locality': {}, 'subject': 'Inception'}, 'post': {'rewrite_acc': [0.2], 'locality': {}, 'portability': {}}}
+2025-05-09 07:51:01,118 - easyeditor.editors.editor - INFO - 1 editing: What is the capital city of Australia? -> Sydney  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'What is the capital city of Australia?', 'target_new': 'Sydney', 'ground_truth': 'Canberra', 'portability': {}, 'locality': {}, 'subject': 'Australia'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 07:51:01,190 - easyeditor.editors.editor - INFO - 2 editing: Who wrote the play 'Romeo and Juliet'? -> Jane Austen  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': "Who wrote the play 'Romeo and Juliet'?", 'target_new': 'Jane Austen', 'ground_truth': 'William Shakespeare', 'portability': {}, 'locality': {}, 'subject': 'Romeo and Juliet'}, 'post': {'rewrite_acc': [0.3333333333333333], 'locality': {}, 'portability': {}}}
+2025-05-09 07:59:40,735 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 07:59:43,110 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 08:00:16,769 - easyeditor.editors.editor - INFO - 0 editing: Who is the lead actor in the movie 'Inception'? -> Matthew McConaughey  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': "Who is the lead actor in the movie 'Inception'?", 'target_new': 'Matthew McConaughey', 'ground_truth': 'Leonardo DiCaprio', 'portability': {}, 'locality': {}, 'subject': 'Inception'}, 'post': {'rewrite_acc': [0.2], 'locality': {}, 'portability': {}}}
+2025-05-09 08:00:16,840 - easyeditor.editors.editor - INFO - 1 editing: What is the capital city of Australia? -> Sydney  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'What is the capital city of Australia?', 'target_new': 'Sydney', 'ground_truth': 'Canberra', 'portability': {}, 'locality': {}, 'subject': 'Australia'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 08:00:16,913 - easyeditor.editors.editor - INFO - 2 editing: Who wrote the play 'Romeo and Juliet'? -> Jane Austen  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': "Who wrote the play 'Romeo and Juliet'?", 'target_new': 'Jane Austen', 'ground_truth': 'William Shakespeare', 'portability': {}, 'locality': {}, 'subject': 'Romeo and Juliet'}, 'post': {'rewrite_acc': [0.3333333333333333], 'locality': {}, 'portability': {}}}
+2025-05-09 08:05:20,759 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 08:05:23,008 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 08:05:46,175 - easyeditor.editors.editor - INFO - 0 editing: What is the population of Tokyo? -> Over 30 million  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': 'What is the population of Tokyo?', 'target_new': 'Over 30 million', 'ground_truth': 'Approximately 14 million', 'portability': {}, 'locality': {}, 'subject': 'Tokyo'}, 'post': {'rewrite_acc': [0.2], 'locality': {}, 'portability': {}}}
+2025-05-09 08:05:46,246 - easyeditor.editors.editor - INFO - 1 editing: Who is the founder of Microsoft? -> Elon Musk  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'Who is the founder of Microsoft?', 'target_new': 'Elon Musk', 'ground_truth': 'Bill Gates', 'portability': {}, 'locality': {}, 'subject': 'Microsoft'}, 'post': {'rewrite_acc': [0.5], 'locality': {}, 'portability': {}}}
+2025-05-09 08:05:46,317 - easyeditor.editors.editor - INFO - 2 editing: What is the main export of Brazil? -> Coffee  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': 'What is the main export of Brazil?', 'target_new': 'Coffee', 'ground_truth': 'Soybeans', 'portability': {}, 'locality': {}, 'subject': 'Brazil'}, 'post': {'rewrite_acc': [1.0], 'locality': {}, 'portability': {}}}
+2025-05-09 08:09:58,606 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 08:10:00,984 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 08:10:39,184 - easyeditor.editors.editor - INFO - 0 editing: Who directed the movie 'The Shawshank Redemption'? -> Christopher Nolan  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 0, 'requested_rewrite': {'prompt': "Who directed the movie 'The Shawshank Redemption'?", 'target_new': 'Christopher Nolan', 'ground_truth': 'Frank Darabont', 'portability': {}, 'locality': {}, 'subject': 'The Shawshank Redemption'}, 'post': {'rewrite_acc': [0.5], 'locality': {}, 'portability': {}}}
+2025-05-09 08:10:39,256 - easyeditor.editors.editor - INFO - 1 editing: In which year did the Titanic sink? -> 1901  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 1, 'requested_rewrite': {'prompt': 'In which year did the Titanic sink?', 'target_new': '1901', 'ground_truth': '1912', 'portability': {}, 'locality': {}, 'subject': 'Titanic'}, 'post': {'rewrite_acc': [0.2], 'locality': {}, 'portability': {}}}
+2025-05-09 08:10:39,327 - easyeditor.editors.editor - INFO - 2 editing: Who is the author of 'To Kill a Mockingbird'? -> J.K. Rowling  
+
+ {'pre': {'rewrite_acc': [0.0], 'portability': {}}, 'case_id': 2, 'requested_rewrite': {'prompt': "Who is the author of 'To Kill a Mockingbird'?", 'target_new': 'J.K. Rowling', 'ground_truth': 'Harper Lee', 'portability': {}, 'locality': {}, 'subject': 'To Kill a Mockingbird'}, 'post': {'rewrite_acc': [0.25], 'locality': {}, 'portability': {}}}
+2025-05-09 10:39:19,493 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 10:39:23,059 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...
+2025-05-09 10:39:53,606 - easyeditor.editors.editor - INFO - Instantiating model
+2025-05-09 10:39:55,965 - easyeditor.editors.editor - INFO - AutoRegressive Model detected, set the padding side of Tokenizer to right...

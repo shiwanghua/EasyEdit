@@ -1,0 +1,74 @@
+[
+    {
+        "pre": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "portability": {}
+        },
+        "case_id": 0,
+        "requested_rewrite": {
+            "prompt": "Who directed the movie 'The Shawshank Redemption'?",
+            "target_new": "Christopher Nolan",
+            "ground_truth": "Frank Darabont",
+            "portability": {},
+            "locality": {},
+            "subject": "The Shawshank Redemption"
+        },
+        "post": {
+            "rewrite_acc": [
+                0.5
+            ],
+            "locality": {},
+            "portability": {}
+        }
+    },
+    {
+        "pre": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "portability": {}
+        },
+        "case_id": 1,
+        "requested_rewrite": {
+            "prompt": "In which year did the Titanic sink?",
+            "target_new": "1901",
+            "ground_truth": "1912",
+            "portability": {},
+            "locality": {},
+            "subject": "Titanic"
+        },
+        "post": {
+            "rewrite_acc": [
+                0.2
+            ],
+            "locality": {},
+            "portability": {}
+        }
+    },
+    {
+        "pre": {
+            "rewrite_acc": [
+                0.0
+            ],
+            "portability": {}
+        },
+        "case_id": 2,
+        "requested_rewrite": {
+            "prompt": "Who is the author of 'To Kill a Mockingbird'?",
+            "target_new": "J.K. Rowling",
+            "ground_truth": "Harper Lee",
+            "portability": {},
+            "locality": {},
+            "subject": "To Kill a Mockingbird"
+        },
+        "post": {
+            "rewrite_acc": [
+                0.25
+            ],
+            "locality": {},
+            "portability": {}
+        }
+    }
+]
